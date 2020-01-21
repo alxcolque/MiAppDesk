@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MiAppDesk
+namespace MiAppDesk.View
 {
-    public partial class frmLogin : Form
+    public partial class Vendedor : Form
     {
-        public frmLogin()
+        public Vendedor()
         {
             InitializeComponent();
         }

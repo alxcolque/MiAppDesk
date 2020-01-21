@@ -1,1 +1,17 @@
 c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\bin\Debug\MiAppDesk.exe.config
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\bin\Debug\MiAppDesk.exe
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\bin\Debug\MiAppDesk.pdb
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\bin\Debug\Bunifu_UI_v1.5.3.dll
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.csprojResolveAssemblyReference.cache
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.frmLogin.resources
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.Properties.Resources.resources
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.csproj.GenerateResource.Cache
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.exe
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.pdb
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\bin\Debug\MySql.Data.dll
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\bin\Debug\Google.Protobuf.dll
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\bin\Debug\Renci.SshNet.dll
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\bin\Debug\BouncyCastle.Crypto.dll
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\bin\Debug\MySql.Data.xml
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.Principal.resources
+c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.Vendedor.resources
