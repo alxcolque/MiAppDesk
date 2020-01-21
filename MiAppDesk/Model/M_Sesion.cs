@@ -77,19 +77,19 @@ namespace MiAppDesk.Model
                 bool r = validate_login(user, pass);
                 if (r)
                 {
-                    /*abrirConexion();
-                    MySqlCommand cmd = new MySqlCommand("Select rol_id from usuarios WHERE nombre_usuario = '"+C_Sesion.Usuario+ "'AND rol_id=1",conn);
+                    abrirConexion();
+                    MySqlCommand cmd = new MySqlCommand("SELECT COUNT(rol_id) FROM usuarios WHERE nombre_usuario = '" + C_Sesion.Usuario + "' AND rol_id = 1", conn);
                     id_rol = (cmd.ExecuteScalar()).ToString();
                     
-                    if (id_rol == "1"){*/
+                    if ((Convert.ToInt32(id_rol)) > 0){
                         Principal m = new Principal();
                         m.ShowDialog();
-                    /*}
+                    }
                     else {
                         Vendedor m = new Vendedor();
                         m.ShowDialog();
                     }
-                    conn.Close();*/
+                    conn.Close();
 
                 }
                 else
