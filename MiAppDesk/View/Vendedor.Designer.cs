@@ -45,14 +45,13 @@
             this.btnItems = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnStock = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.lblTimer = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnMenu = new Bunifu.Framework.UI.BunifuImageButton();
             this.pnlCuerpo = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.curvaSidebar = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.curvaCerrar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.tiempoReal = new System.Windows.Forms.Timer(this.components);
             this.animacion2 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.lblTimer = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnlLeft.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -265,6 +264,7 @@
             this.btnPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrincipal.Textcolor = System.Drawing.Color.White;
             this.btnPrincipal.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
             // 
             // btnClientes
             // 
@@ -387,6 +387,20 @@
             this.pnlSuperior.Size = new System.Drawing.Size(984, 46);
             this.pnlSuperior.TabIndex = 6;
             // 
+            // lblTimer
+            // 
+            this.lblTimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTimer.AutoSize = true;
+            this.animacion1.SetDecoration(this.lblTimer, BunifuAnimatorNS.DecorationType.None);
+            this.animacion2.SetDecoration(this.lblTimer, BunifuAnimatorNS.DecorationType.None);
+            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.ForeColor = System.Drawing.Color.White;
+            this.lblTimer.Location = new System.Drawing.Point(782, 16);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(82, 16);
+            this.lblTimer.TabIndex = 0;
+            this.lblTimer.Text = "HH:MM:SS";
+            // 
             // btnMenu
             // 
             this.btnMenu.BackColor = System.Drawing.Color.Transparent;
@@ -420,10 +434,6 @@
             this.curvaSidebar.ElipseRadius = 10;
             this.curvaSidebar.TargetControl = this.pnlSidebar;
             // 
-            // curvaCerrar
-            // 
-            this.curvaCerrar.ElipseRadius = 20;
-            // 
             // animacion2
             // 
             this.animacion2.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
@@ -445,20 +455,6 @@
             animation2.TransparencyCoeff = 0F;
             this.animacion2.DefaultAnimation = animation2;
             // 
-            // lblTimer
-            // 
-            this.lblTimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTimer.AutoSize = true;
-            this.animacion1.SetDecoration(this.lblTimer, BunifuAnimatorNS.DecorationType.None);
-            this.animacion2.SetDecoration(this.lblTimer, BunifuAnimatorNS.DecorationType.None);
-            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.ForeColor = System.Drawing.Color.White;
-            this.lblTimer.Location = new System.Drawing.Point(782, 16);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(82, 16);
-            this.lblTimer.TabIndex = 0;
-            this.lblTimer.Text = "HH:MM:SS";
-            // 
             // Vendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,6 +465,7 @@
             this.Controls.Add(this.pnlCuerpo);
             this.animacion1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.animacion2.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Vendedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendedor";
@@ -502,7 +499,6 @@
         private System.Windows.Forms.Panel pnlCuerpo;
         private System.Windows.Forms.Timer timer1;
         private Bunifu.Framework.UI.BunifuElipse curvaSidebar;
-        private Bunifu.Framework.UI.BunifuElipse curvaCerrar;
         private System.Windows.Forms.Timer tiempoReal;
         private Bunifu.Framework.UI.BunifuCustomLabel lblTimer;
     }

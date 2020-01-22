@@ -69,6 +69,18 @@
     <Compile Include="View\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UserControls\UC_Inicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\UC_Inicio.Designer.cs">
+      <DependentUpon>UC_Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\UC_Productos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\UC_Productos.Designer.cs">
+      <DependentUpon>UC_Productos.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Vendedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,7 +120,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\Dialogs\" />
-    <Folder Include="View\UserControls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

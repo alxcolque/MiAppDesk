@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="animacion1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>908, 56</value>
+    <value>603, 90</value>
   </metadata>
   <data name="animation1.BlindCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -1613,7 +1613,7 @@
   <data name="btnItems.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAALb9JREFUeF7t3Y912zjTxeGvhJSQElLClpASUkJaSAUuISWkhC1hS0gJW8L73auB
+        vAAADrwBlbxySQAALb9JREFUeF7t3Y912zjTxeGvhJSQElLClpASUkJaSAUuISWkhC1hS0gJW8L73auB
         Voliy5IIDkDM7zmH5/0TmyLAIeaaouz/AwAAwA7+97///aXt2y/bV22f2j+j0ZwwT43GzVy8QfPwUduX
         Ni/n7bO2D+1LAGAcL0ZtYfpX21t+avvWvqUkjZ95ajRGz8V3be/NxZf2LaVo3A5Ff3sSbvD8fWzfAgC5
         tAB90uaF+l7/aCu3aGnMzFOjcfkn2FuN/5obYZmfeDXWl9Oo71cyJAEYSAuPm9ojC/mZv6fMLV6PtY35
@@ -1847,9 +1847,6 @@
   </metadata>
   <metadata name="curvaSidebar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>104, 95</value>
-  </metadata>
-  <metadata name="curvaCerrar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>226, 95</value>
   </metadata>
   <metadata name="tiempoReal.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>340, 95</value>

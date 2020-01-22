@@ -7,14 +7,93 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/// </summary>
+using System.Runtime.InteropServices;
+using MiAppDesk.Controller;
+using MiAppDesk.View.UserControls;
 
 namespace MiAppDesk.View
 {
     public partial class Principal : Form
     {
+
+        int panelWidth;
+        bool isCollapsed;
         public Principal()
         {
             InitializeComponent();
+            lblAdmin.Text = C_Sesion.Usuario;
+            tiempoReal.Start();
+            panelWidth = pnlLeft.Width;
+            isCollapsed = false;
+            UC_Inicio uch = new UC_Inicio();
+            AddControlsToPanel(uch);
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+        private void moveSidePanel(Control btn)
+        {
+            //btn.BackColor = Color.Red;
+            //btnPrincipal.Normalcolor = Color.Red;
+            panelAct.Top = btn.Top;
+            panelAct.Height = btn.Height;
+        }
+        private void AddControlsToPanel(Control c)
+        {
+            c.Dock = DockStyle.Fill;
+            pnlCuerpo.Controls.Clear();
+            pnlCuerpo.Controls.Add(c);
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (isCollapsed)
+            {
+                pnlSidebar.Visible = false;
+                pnlLeft.Width = pnlLeft.Width + 20;
+                if (pnlLeft.Width >= panelWidth)
+                {
+                    timer1.Stop();
+                    isCollapsed = false;
+                    this.Refresh();
+                    animacion1.Show(pnlSidebar);
+                }
+            }
+            else
+            {
+                pnlSidebar.Visible = false;
+                pnlLeft.Width = pnlLeft.Width - 20;
+                if (pnlLeft.Width <= 80)
+                {
+                    timer1.Stop();
+                    isCollapsed = true;
+                    this.Refresh();
+                    animacion1.Show(pnlSidebar);
+                }
+            }
+        }
+
+        private void tiempoReal_Tick_1(object sender, EventArgs e)
+        {
+            DateTime dt = DateTime.Now;
+            lblTimer.Text = dt.ToString("HH:MM:ss");
+        }
+
+        private void btnPrincipal_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnPrincipal);
+            UC_Inicio uch = new UC_Inicio();
+            AddControlsToPanel(uch);
+        }
+
+        private void btnItems_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnItems);
+            UC_Productos uch = new UC_Productos();
+            AddControlsToPanel(uch);
         }
     }
+    
 }
