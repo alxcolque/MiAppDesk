@@ -47,7 +47,28 @@ namespace MiAppDesk.View
             pnlCuerpo.Controls.Clear();
             pnlCuerpo.Controls.Add(c);
         }
-        private void timer1_Tick(object sender, EventArgs e)
+
+        private void tiempoReal_Tick_1(object sender, EventArgs e)
+        {
+            DateTime dt = DateTime.Now;
+            //lblTimer.Text = dt.ToString("HH:MM:ss");
+        }
+
+        private void btnPrincipal_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnPrincipal);
+            UC_Inicio uch = new UC_Inicio();
+            AddControlsToPanel(uch);
+        }
+
+        private void btnItems_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnItems);
+            UC_Productos uch = new UC_Productos();
+            AddControlsToPanel(uch);
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
         {
             if (isCollapsed)
             {
@@ -75,25 +96,11 @@ namespace MiAppDesk.View
             }
         }
 
-        private void tiempoReal_Tick_1(object sender, EventArgs e)
+        private void lblAdmin_Click(object sender, EventArgs e)
         {
-            DateTime dt = DateTime.Now;
-            lblTimer.Text = dt.ToString("HH:MM:ss");
+
         }
 
-        private void btnPrincipal_Click(object sender, EventArgs e)
-        {
-            moveSidePanel(btnPrincipal);
-            UC_Inicio uch = new UC_Inicio();
-            AddControlsToPanel(uch);
-        }
-
-        private void btnItems_Click(object sender, EventArgs e)
-        {
-            moveSidePanel(btnItems);
-            UC_Productos uch = new UC_Productos();
-            AddControlsToPanel(uch);
-        }
     }
     
 }

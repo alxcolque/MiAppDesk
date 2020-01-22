@@ -15,3 +15,6 @@ c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\bin\Debu
 c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\bin\Debug\MySql.Data.xml
 c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.Principal.resources
 c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.Vendedor.resources
+C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.UserControls.UC_Inicio.resources
+C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.UserControls.UC_Productos.resources
+C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.Dialogs.Tipos.resources

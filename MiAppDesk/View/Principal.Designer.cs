@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             this.animacion1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.pnlSidebar = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -44,41 +44,41 @@
             this.btnClientes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnItems = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnStock = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pnlSuperior = new System.Windows.Forms.Panel();
-            this.lblTimer = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnMenu = new Bunifu.Framework.UI.BunifuImageButton();
-            this.pnlCuerpo = new System.Windows.Forms.Panel();
             this.curvaSidebar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.tiempoReal = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.animacion2 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.pnlCuerpo = new System.Windows.Forms.Panel();
+            this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlLeft.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
+            this.pnlSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // animacion1
             // 
-            this.animacion1.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
+            this.animacion1.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
             this.animacion1.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 0F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 1;
-            animation5.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 2F;
-            animation5.TransparencyCoeff = 0F;
-            this.animacion1.DefaultAnimation = animation5;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 20;
+            animation3.Padding = new System.Windows.Forms.Padding(30);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.animacion1.DefaultAnimation = animation3;
             // 
             // pnlLeft
             // 
@@ -87,9 +87,9 @@
             this.animacion2.SetDecoration(this.pnlLeft, BunifuAnimatorNS.DecorationType.None);
             this.animacion1.SetDecoration(this.pnlLeft, BunifuAnimatorNS.DecorationType.None);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlLeft.Location = new System.Drawing.Point(0, 46);
+            this.pnlLeft.Location = new System.Drawing.Point(0, 64);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(200, 615);
+            this.pnlLeft.Size = new System.Drawing.Size(200, 597);
             this.pnlLeft.TabIndex = 7;
             // 
             // pnlSidebar
@@ -99,8 +99,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
             this.pnlSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlSidebar.Controls.Add(this.lblAdmin);
-            this.pnlSidebar.Controls.Add(this.pictureBox1);
             this.pnlSidebar.Controls.Add(this.btnGraficos);
             this.pnlSidebar.Controls.Add(this.panelAct);
             this.pnlSidebar.Controls.Add(this.btnVentas);
@@ -117,32 +115,35 @@
             this.pnlSidebar.Location = new System.Drawing.Point(9, 3);
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Quality = 10;
-            this.pnlSidebar.Size = new System.Drawing.Size(182, 609);
+            this.pnlSidebar.Size = new System.Drawing.Size(182, 567);
             this.pnlSidebar.TabIndex = 0;
             // 
             // lblAdmin
             // 
+            this.lblAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.BackColor = System.Drawing.Color.Transparent;
             this.animacion1.SetDecoration(this.lblAdmin, BunifuAnimatorNS.DecorationType.None);
             this.animacion2.SetDecoration(this.lblAdmin, BunifuAnimatorNS.DecorationType.None);
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblAdmin.Location = new System.Drawing.Point(5, 71);
+            this.lblAdmin.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblAdmin.Location = new System.Drawing.Point(830, 21);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(75, 25);
             this.lblAdmin.TabIndex = 1;
             this.lblAdmin.Text = "admin";
+            this.lblAdmin.Click += new System.EventHandler(this.lblAdmin_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.animacion1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.animacion2.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(64, -3);
+            this.pictureBox1.Location = new System.Drawing.Point(911, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(61, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -170,7 +171,7 @@
             this.btnGraficos.IconVisible = true;
             this.btnGraficos.IconZoom = 50D;
             this.btnGraficos.IsTab = false;
-            this.btnGraficos.Location = new System.Drawing.Point(10, 446);
+            this.btnGraficos.Location = new System.Drawing.Point(10, 364);
             this.btnGraficos.Name = "btnGraficos";
             this.btnGraficos.Normalcolor = System.Drawing.Color.Transparent;
             this.btnGraficos.OnHovercolor = System.Drawing.Color.Crimson;
@@ -188,7 +189,7 @@
             this.panelAct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.animacion2.SetDecoration(this.panelAct, BunifuAnimatorNS.DecorationType.None);
             this.animacion1.SetDecoration(this.panelAct, BunifuAnimatorNS.DecorationType.None);
-            this.panelAct.Location = new System.Drawing.Point(3, 99);
+            this.panelAct.Location = new System.Drawing.Point(3, 17);
             this.panelAct.Name = "panelAct";
             this.panelAct.Size = new System.Drawing.Size(10, 48);
             this.panelAct.TabIndex = 14;
@@ -216,7 +217,7 @@
             this.btnVentas.IconVisible = true;
             this.btnVentas.IconZoom = 50D;
             this.btnVentas.IsTab = false;
-            this.btnVentas.Location = new System.Drawing.Point(8, 372);
+            this.btnVentas.Location = new System.Drawing.Point(8, 290);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Normalcolor = System.Drawing.Color.Transparent;
             this.btnVentas.OnHovercolor = System.Drawing.Color.Crimson;
@@ -252,7 +253,7 @@
             this.btnPrincipal.IconVisible = true;
             this.btnPrincipal.IconZoom = 50D;
             this.btnPrincipal.IsTab = false;
-            this.btnPrincipal.Location = new System.Drawing.Point(8, 98);
+            this.btnPrincipal.Location = new System.Drawing.Point(8, 16);
             this.btnPrincipal.Name = "btnPrincipal";
             this.btnPrincipal.Normalcolor = System.Drawing.Color.Transparent;
             this.btnPrincipal.OnHovercolor = System.Drawing.Color.Crimson;
@@ -289,7 +290,7 @@
             this.btnClientes.IconVisible = true;
             this.btnClientes.IconZoom = 50D;
             this.btnClientes.IsTab = false;
-            this.btnClientes.Location = new System.Drawing.Point(8, 302);
+            this.btnClientes.Location = new System.Drawing.Point(8, 220);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Normalcolor = System.Drawing.Color.Transparent;
             this.btnClientes.OnHovercolor = System.Drawing.Color.Crimson;
@@ -325,7 +326,7 @@
             this.btnItems.IconVisible = true;
             this.btnItems.IconZoom = 50D;
             this.btnItems.IsTab = false;
-            this.btnItems.Location = new System.Drawing.Point(10, 162);
+            this.btnItems.Location = new System.Drawing.Point(10, 80);
             this.btnItems.Name = "btnItems";
             this.btnItems.Normalcolor = System.Drawing.Color.Transparent;
             this.btnItems.OnHovercolor = System.Drawing.Color.Crimson;
@@ -362,7 +363,7 @@
             this.btnStock.IconVisible = true;
             this.btnStock.IconZoom = 50D;
             this.btnStock.IsTab = false;
-            this.btnStock.Location = new System.Drawing.Point(8, 233);
+            this.btnStock.Location = new System.Drawing.Point(8, 151);
             this.btnStock.Name = "btnStock";
             this.btnStock.Normalcolor = System.Drawing.Color.Transparent;
             this.btnStock.OnHovercolor = System.Drawing.Color.Crimson;
@@ -375,33 +376,6 @@
             this.btnStock.Textcolor = System.Drawing.Color.White;
             this.btnStock.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // pnlSuperior
-            // 
-            this.pnlSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.pnlSuperior.Controls.Add(this.lblTimer);
-            this.pnlSuperior.Controls.Add(this.btnMenu);
-            this.animacion2.SetDecoration(this.pnlSuperior, BunifuAnimatorNS.DecorationType.None);
-            this.animacion1.SetDecoration(this.pnlSuperior, BunifuAnimatorNS.DecorationType.None);
-            this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
-            this.pnlSuperior.Name = "pnlSuperior";
-            this.pnlSuperior.Size = new System.Drawing.Size(984, 46);
-            this.pnlSuperior.TabIndex = 6;
-            // 
-            // lblTimer
-            // 
-            this.lblTimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTimer.AutoSize = true;
-            this.animacion1.SetDecoration(this.lblTimer, BunifuAnimatorNS.DecorationType.None);
-            this.animacion2.SetDecoration(this.lblTimer, BunifuAnimatorNS.DecorationType.None);
-            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.ForeColor = System.Drawing.Color.White;
-            this.lblTimer.Location = new System.Drawing.Point(890, 10);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(82, 16);
-            this.lblTimer.TabIndex = 0;
-            this.lblTimer.Text = "HH:MM:SS";
-            // 
             // btnMenu
             // 
             this.btnMenu.BackColor = System.Drawing.Color.Transparent;
@@ -410,7 +384,7 @@
             this.animacion1.SetDecoration(this.btnMenu, BunifuAnimatorNS.DecorationType.None);
             this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
             this.btnMenu.ImageActive = null;
-            this.btnMenu.Location = new System.Drawing.Point(30, 10);
+            this.btnMenu.Location = new System.Drawing.Point(175, 21);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(25, 25);
             this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -419,52 +393,83 @@
             this.btnMenu.Zoom = 10;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // pnlCuerpo
-            // 
-            this.pnlCuerpo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.animacion2.SetDecoration(this.pnlCuerpo, BunifuAnimatorNS.DecorationType.None);
-            this.animacion1.SetDecoration(this.pnlCuerpo, BunifuAnimatorNS.DecorationType.None);
-            this.pnlCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCuerpo.ForeColor = System.Drawing.Color.Black;
-            this.pnlCuerpo.Location = new System.Drawing.Point(0, 0);
-            this.pnlCuerpo.Name = "pnlCuerpo";
-            this.pnlCuerpo.Size = new System.Drawing.Size(984, 661);
-            this.pnlCuerpo.TabIndex = 8;
-            // 
             // curvaSidebar
             // 
             this.curvaSidebar.ElipseRadius = 10;
             this.curvaSidebar.TargetControl = this.pnlSidebar;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
             // animacion2
             // 
             this.animacion2.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.animacion2.Cursor = null;
-            animation6.AnimateOnlyDifferences = true;
-            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
-            animation6.LeafCoeff = 0F;
-            animation6.MaxTime = 1F;
-            animation6.MinTime = 0F;
-            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
-            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
-            animation6.MosaicSize = 0;
-            animation6.Padding = new System.Windows.Forms.Padding(0);
-            animation6.RotateCoeff = 0F;
-            animation6.RotateLimit = 0F;
-            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
-            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
-            animation6.TimeCoeff = 0F;
-            animation6.TransparencyCoeff = 0F;
-            this.animacion2.DefaultAnimation = animation6;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.animacion2.DefaultAnimation = animation4;
+            // 
+            // pnlCuerpo
+            // 
+            this.animacion2.SetDecoration(this.pnlCuerpo, BunifuAnimatorNS.DecorationType.None);
+            this.animacion1.SetDecoration(this.pnlCuerpo, BunifuAnimatorNS.DecorationType.None);
+            this.pnlCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCuerpo.Location = new System.Drawing.Point(200, 64);
+            this.pnlCuerpo.Name = "pnlCuerpo";
+            this.pnlCuerpo.Size = new System.Drawing.Size(784, 597);
+            this.pnlCuerpo.TabIndex = 8;
+            // 
+            // pnlSuperior
+            // 
+            this.pnlSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.pnlSuperior.Controls.Add(this.lblAdmin);
+            this.pnlSuperior.Controls.Add(this.pictureBox1);
+            this.pnlSuperior.Controls.Add(this.label1);
+            this.pnlSuperior.Controls.Add(this.btnMenu);
+            this.animacion2.SetDecoration(this.pnlSuperior, BunifuAnimatorNS.DecorationType.None);
+            this.animacion1.SetDecoration(this.pnlSuperior, BunifuAnimatorNS.DecorationType.None);
+            this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
+            this.pnlSuperior.Name = "pnlSuperior";
+            this.pnlSuperior.Size = new System.Drawing.Size(984, 64);
+            this.pnlSuperior.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.animacion1.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.animacion2.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.Location = new System.Drawing.Point(29, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 25);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Supervisor";
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.pnlCuerpo);
             this.Controls.Add(this.pnlLeft);
             this.Controls.Add(this.pnlSuperior);
-            this.Controls.Add(this.pnlCuerpo);
             this.animacion1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.animacion2.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.Name = "Principal";
@@ -472,11 +477,10 @@
             this.Text = "Principal";
             this.pnlLeft.ResumeLayout(false);
             this.pnlSidebar.ResumeLayout(false);
-            this.pnlSidebar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.pnlSuperior.ResumeLayout(false);
             this.pnlSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -496,12 +500,12 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnClientes;
         private Bunifu.Framework.UI.BunifuFlatButton btnItems;
         private Bunifu.Framework.UI.BunifuFlatButton btnStock;
-        private System.Windows.Forms.Panel pnlSuperior;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblTimer;
         private Bunifu.Framework.UI.BunifuImageButton btnMenu;
-        private System.Windows.Forms.Panel pnlCuerpo;
         private Bunifu.Framework.UI.BunifuElipse curvaSidebar;
         private System.Windows.Forms.Timer tiempoReal;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel pnlCuerpo;
+        private System.Windows.Forms.Panel pnlSuperior;
+        private System.Windows.Forms.Label label1;
     }
 }
