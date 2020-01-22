@@ -9,67 +9,129 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //Libs
 using MiAppDesk.Controller;
-using MySql.Data.MySqlClient;
 using System.Configuration;
 
 namespace MiAppDesk.View.Dialogs
 {
     public partial class Tipos : Form
     {
-        internal static MySqlConnection conn = null;
+        private string id;//Ayuda Editar y eliminar
+        private bool editarse = false;
+        //Invocando a las clases claves
+        C_Tipo objC = new C_Tipo();
         public Tipos()
         {
-            InitializeComponent();
-            datostabla();
+            InitializeComponent(); 
+            datostabla("");
+            
         }
-        private void abrirConexion()
+        
+        public void AccionesTabla()
         {
-            string conexionstring = ConfigurationManager.ConnectionStrings["conexion"].ConnectionString;
-            conn = new MySqlConnection(conexionstring);
-            try
-            {
-                conn.Open();
-                MessageBox.Show("Conexion establecida");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error de conexion");
-                Application.Exit();
-                throw new Exception("Error !!!");
-            }
+            dgvTi.Columns[0].Visible = false;
+            dgvTi.Columns[1].Width = 60;
+            dgvTi.Columns[2].Width = 150;
+            dgvTi.ClearSelection();
         }
-
         private void btnNewT_Click(object sender, EventArgs e)
         {
 
         }
-        private void datostabla()
+        private void limpiar()
         {
-            abrirConexion();
-            List<C_Tipo> Lista = new List<C_Tipo>();
-            using (MySqlCommand command = new MySqlCommand())
-            {
-                StringBuilder Query = new StringBuilder();
+            editarse = false;
+            txtTipo.Text = "";
+            txtTipo.Focus();// 
+        }
+        private void datostabla(string buscar)
+        {            
+            C_Tipo obj = new C_Tipo();
+            dgvTi.DataSource = obj.Listado(buscar);
 
-                Query.Append("SELECT tipo_id, nombre FROM tipos;");
-
-                command.CommandType = System.Data.CommandType.Text;
-                command.CommandText = Query.ToString();
-
-                MySqlDataReader reader = null;
-                command.Connection = conn;
-                reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    C_Tipo obj = new C_Tipo();
-                    obj.Id = Convert.ToInt32(reader["tipo_id"]);
-                    obj.Tipo = reader["nombre"].ToString();
-                    Lista.Add(obj);
-                }
-            }
-            dgvTi.DataSource = Lista.OrderBy(b => b.Id).ToList();
-            conn.Close();
+        }
+        //buscar datos en tiempo real
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            datostabla(txtBuscar.Text);
         }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if(dgvTi.SelectedRows.Count > 0)
+            {
+                editarse = true;
+                id = dgvTi.CurrentRow.Cells[0].Value.ToString();
+                txtTipo.Text = dgvTi.CurrentRow.Cells[1].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione la tabla que desea editar");
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvTi.SelectedRows.Count > 0)
+            {
+                objC.Idtipo = Convert.ToInt32(dgvTi.CurrentRow.Cells[0].Value.ToString());
+                objC.Eliminar(objC);
+                datostabla("");
+            }
+            else
+            {
+                MessageBox.Show("Seleccione la fila que desee eliminar ");
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if(txtTipo.Text != "")
+            {
+                if (editarse == false)
+                {
+                    try
+                    {
+                        objC.Nombre = txtTipo.Text;
+
+                        objC.Insertar(objC);
+                        MessageBox.Show("Se guardó el registro ");
+                        datostabla("");
+                        limpiar();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo guardar el registro " + ex);
+                    }
+                }
+                if (editarse == true)
+                {
+                    try
+                    {
+                        objC.Idtipo = Convert.ToInt32(id);
+                        objC.Nombre = txtTipo.Text;
+
+                        objC.Editar(objC);
+                        MessageBox.Show("Se guardó el registro ");
+                        datostabla("");
+                        limpiar();
+                        editarse = false;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo editar el registro " + ex);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Llene los campos por favor");
+            }
+            
+        }
     }
 }

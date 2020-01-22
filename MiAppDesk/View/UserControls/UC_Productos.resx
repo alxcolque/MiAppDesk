@@ -121,7 +121,7 @@
   <data name="btnTipos.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAPNhJREFUeF7t3Q+kbWX+x/GfkVy5ruS6cuVKkiRJkiRJkiRJMpIkGUmSJEkSGSMZ
+        vgAADr4B6kKxwAAAPNhJREFUeF7t3Q+kbWX+x/GfkVy5ruS6cuVKkiRJkiRJkiRJMpIkGUmSJEkSGSMZ
         yUiSJElGkowkSTJGkiQZyUiSJMlIxhhj/Px+7885z545nTnnnrOfvfZez7P2+8WH36+5e6119t7PXt+1
         1vPnfyRJkiRJS/R///d/R8kd5H1yZfnPkiRpajjRHyCXkqfI1+SfJB4u/0SSJE0BJ/dfkFPJ9eQt8gPZ
         7rnyzyVJUs84qZ9ATicPko/J/5LdvFZeJkmSesTJ/ERyBXmR/I3sx3vl5ZIkqSecxHO1fzf5iPyDzCMd
@@ -384,4 +384,7 @@
         AABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="curvaBTNtipos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
