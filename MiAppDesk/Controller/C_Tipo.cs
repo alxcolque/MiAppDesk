@@ -12,7 +12,9 @@ namespace MiAppDesk.Controller
     {
         private int _Idtipo;
         private string _Nombre;
-
+        /// <summary>
+        /// GETERS Y SETERS    BY: Colque
+        /// </summary>
         public int Idtipo
         {
             get

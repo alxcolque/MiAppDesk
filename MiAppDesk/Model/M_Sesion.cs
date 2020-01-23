@@ -97,7 +97,7 @@ namespace MiAppDesk.Model
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error de metodo Login");
+                MessageBox.Show("Error de metodo Login"+ex);
                 throw new Exception("Error !!!");
             }
 

@@ -18,3 +18,4 @@ c:\users\alex\documents\visual studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debu
 C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.UserControls.UC_Inicio.resources
 C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.UserControls.UC_Productos.resources
 C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.Dialogs.Tipos.resources
+C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.Dialogs.Item_Dialog.resources
