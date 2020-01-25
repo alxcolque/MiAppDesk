@@ -79,12 +79,12 @@ namespace MiAppDesk.Model
                 {
                     MySqlCommand idmax = new MySqlCommand("SELECT MAX(item_id) FROM items", conn);
                     string _id = (idmax.ExecuteScalar()).ToString();
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO items (item_id,nombre,precio,fabricante,unidad,tipo_id) VALUES ('" + (Dato.ID + 1) + "', '" + Dato.Nombre + "', '" + Dato.Precio + "', '" + Dato.Fabricante + "', '" + Dato.Unidad + "', '" + C_Item.IdTipo + "')", conn);
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO items (item_id,nombre,precio,fabricante,unidad,tipo_id) VALUES ('" + (Convert.ToInt32(id) + 1) + "', '" + Dato.Nombre + "', '" + (Dato.Precio).ToString().Replace(',','.') + "', '" + Dato.Fabricante + "', '" + Dato.Unidad + "', '" + C_Item.IdTipo + "')", conn);
                     cmd.ExecuteNonQuery();
                 }
                 else
                 {
-                    MySqlCommand cmd3 = new MySqlCommand("INSERT INTO items (item_id,nombre,precio,fabricante,unidad,tipo_id) VALUES ('" + 1 + "', '" + Dato.Nombre + "', '" + Dato.Precio + "', '" + Dato.Fabricante + "', '" + Dato.Unidad + "', '" + C_Item.IdTipo + "')", conn);
+                    MySqlCommand cmd3 = new MySqlCommand("INSERT INTO items (item_id,nombre,precio,fabricante,unidad,tipo_id) VALUES ('" + 1 + "', '" + Dato.Nombre + "', '" + (Dato.Precio).ToString().Replace(',', '.') + "', '" + Dato.Fabricante + "', '" + Dato.Unidad + "', '" + C_Item.IdTipo + "')", conn);
                     cmd3.ExecuteNonQuery();
                 }
 
@@ -101,7 +101,7 @@ namespace MiAppDesk.Model
             try
             {
                 abrirConexion();
-                MySqlCommand cmd = new MySqlCommand("UPDATE tipos SET nombre = '" + Dato.Nombre + "',precio = '" + Dato.Precio + "',fabricante = '" + Dato.Fabricante + "',unidad = '" + Dato.Unidad + "',tipo_id = '" + C_Item.IdTipo + "'WHERE item_id = '" + Dato.ID + "'", conn);
+                MySqlCommand cmd = new MySqlCommand("UPDATE items SET nombre = '" + Dato.Nombre + "',precio = '" + (Dato.Precio).ToString().Replace(',', '.') + "',fabricante = '" + Dato.Fabricante + "',unidad = '" + Dato.Unidad + "',tipo_id = '" + C_Item.IdTipo + "'WHERE item_id = '" + C_Item.IdItem + "'", conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }

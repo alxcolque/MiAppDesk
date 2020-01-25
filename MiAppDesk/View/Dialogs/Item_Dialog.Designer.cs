@@ -247,6 +247,7 @@
             this.cmbxTipo.Name = "cmbxTipo";
             this.cmbxTipo.Size = new System.Drawing.Size(254, 26);
             this.cmbxTipo.TabIndex = 70;
+            this.cmbxTipo.Text = "--Elija Tipo--";
             this.cmbxTipo.SelectedIndexChanged += new System.EventHandler(this.cmbxTipo_SelectedIndexChanged);
             this.cmbxTipo.TextChanged += new System.EventHandler(this.cmbxTipo_TextChanged);
             // 
@@ -312,7 +313,7 @@
             this.Controls.Add(this.label5);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Item_Dialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Item_Dialog";

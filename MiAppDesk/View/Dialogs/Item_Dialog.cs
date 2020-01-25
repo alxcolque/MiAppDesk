@@ -10,13 +10,16 @@ using System.Windows.Forms;
 //REF
 using System.Runtime.InteropServices;
 using MiAppDesk.Controller;
+using System.Globalization;
 
 namespace MiAppDesk.View.Dialogs
 {
     public partial class Item_Dialog : Form
     {
-        C_Item objC = new C_Item();
+        C_Item obj = new C_Item();
         C_Tipo objT = new C_Tipo();
+        private bool editarse = false;
+        
         public Item_Dialog()
         {
             InitializeComponent();
@@ -59,22 +62,82 @@ namespace MiAppDesk.View.Dialogs
             else
             {
                 lblTitleItem.Text = "MODIFICAR ARTICULO";
-                txtItem.Text = objC.Nombre;
-                txtPrecio.Text = (objC.Precio).ToString();
-                txtFabricante.Text = objC.Fabricante;
-                txtUnidad.Text = objC.Unidad;
-                //cmbxTipo.Text = CC_Item.Gramos;
+                
+                txtItem.Text = C_Item.nom;
+                txtPrecio.Text = C_Item.pre.ToString().Replace(',', '.');
+                 txtFabricante.Text = C_Item.fab;
+                txtUnidad.Text = C_Item.uni;
+                cmbxTipo.Text = C_Item.uni;
+                editarse = true;
             }
         }
+        //Colque Alekis
+        private void limpiar()
+        {
+            editarse = false;
+            txtItem.Text = "";
+            txtPrecio.Text = "";
+            txtFabricante.Text = "";
+            txtUnidad.Text = "";
+            txtItem.Focus();// 
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            CultureInfo.CreateSpecificCulture("en-US");
+            if (txtItem.Text != "" && txtPrecio.Text != "" && txtFabricante.Text != "" && txtUnidad.Text != "")
+            {
+                
+                if (editarse == false)
+                {
+                    try
+                    {
+                        obj.Nombre = txtItem.Text;
+                        obj.Precio = Double.Parse(txtPrecio.Text.Trim(),CultureInfo.InvariantCulture.NumberFormat);
+                        obj.Fabricante = txtFabricante.Text;
+                        obj.Unidad = txtUnidad.Text;
+                        C_Item.IdTipo = Convert.ToInt32(cmbxTipo.SelectedValue.ToString());
+                        obj.Insertar(obj);
+                        //MessageBox.Show(obj.Precio+"");
+                        limpiar();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo guardar el registro " + ex);
+                    }
+                }
+                if (editarse == true)
+                {
+                    try
+                    {
+                        obj.Nombre = txtItem.Text;
+                        obj.Precio = Double.Parse(txtPrecio.Text.Trim(), CultureInfo.InvariantCulture.NumberFormat);
+                        obj.Fabricante = txtFabricante.Text;
+                        obj.Unidad = txtUnidad.Text;
+                        C_Item.IdTipo = Convert.ToInt32(cmbxTipo.SelectedValue.ToString());
+                        obj.Editar(obj);
+                        //MessageBox.Show(C_Item.IdItem + "-" + obj.Nombre + "-" + obj.Precio + "-" + obj.Fabricante+"-"+ obj.Unidad+"-"+ C_Item.IdTipo);
+                        limpiar();
+                        editarse = false;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo editar el registro " + ex);
+                    }
+                }
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Llene los campos por favor");
+            }
 
         }
         //
         public void llenarCombo(string data)
         {
-            C_Tipo obj = new C_Tipo();
-            cmbxTipo.DataSource = obj.Listado(data);
+            C_Tipo obj1 = new C_Tipo();
+            cmbxTipo.DataSource = obj1.Listado(data);
             cmbxTipo.DisplayMember = "Nombre";
             cmbxTipo.ValueMember = "Idtipo";
             //C_Item.IdTipo = cmbxTipo.SelectedValue.ToString();

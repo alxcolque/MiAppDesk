@@ -67,24 +67,26 @@ namespace MiAppDesk.View.UserControls
             C_Item.IdItem = 0;
             Item_Dialog m = new Item_Dialog();
             m.ShowDialog();
+            datostabla("");
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            C_Item.IdItem = 1;
+            //C_Item.IdItem = 1;
             if (dgvItems.SelectedRows.Count > 0)
             {
                 editarse = true;
-                objC.ID = Convert.ToInt32(dgvItems.CurrentRow.Cells[0].Value.ToString());
-                objC.Nombre = dgvItems.CurrentRow.Cells[1].Value.ToString();
-                objC.Precio = Convert.ToDouble(dgvItems.CurrentRow.Cells[2].Value.ToString());
-                objC.Fabricante = dgvItems.CurrentRow.Cells[3].Value.ToString();
-                objC.Unidad = dgvItems.CurrentRow.Cells[4].Value.ToString();
-
+                C_Item.IdItem = Int32.Parse(dgvItems.CurrentRow.Cells[0].Value.ToString());
+                C_Item.nom = dgvItems.CurrentRow.Cells[1].Value.ToString();
+                C_Item.pre = dgvItems.CurrentRow.Cells[2].Value.ToString();
+                C_Item.fab = dgvItems.CurrentRow.Cells[3].Value.ToString();
+                C_Item.uni = dgvItems.CurrentRow.Cells[4].Value.ToString();
+                C_Item.tip = dgvItems.CurrentRow.Cells[5].Value.ToString();
+                //MessageBox.Show(objC.Nombre);
                 using (Item_Dialog uf = new Item_Dialog())
                 {
                     uf.ShowDialog();
-                    //refrescar();
+                    datostabla("");
                 }
             }
             else

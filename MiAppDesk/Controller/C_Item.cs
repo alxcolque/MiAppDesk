@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 //Referencias
 using MiAppDesk.Model;
+using System.Globalization;
 
 namespace MiAppDesk.Controller
 {
@@ -19,7 +20,13 @@ namespace MiAppDesk.Controller
 
         public static int IdTipo;
         public static int IdItem;
-        //private int IdTipo;
+        //private int IdTi
+        
+        public static string nom; 
+        public static string pre;
+        public static string fab;
+        public static string uni;
+        public static string tip;
 
         /// <summary>
         /// Getters and Settes By: Colque
@@ -110,9 +117,7 @@ namespace MiAppDesk.Controller
         //Instancias
         //Instanciar
         M_Item obj = new M_Item();
-
-    
-
+        
         //Metodos de CRUD
         public List<C_Item> Listado(string buscar)
         {
