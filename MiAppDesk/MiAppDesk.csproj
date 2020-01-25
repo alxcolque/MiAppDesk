@@ -53,12 +53,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\C_Ciudad.cs" />
+    <Compile Include="Controller\C_Depto.cs" />
     <Compile Include="Controller\C_Item.cs" />
     <Compile Include="Controller\C_Sesion.cs" />
+    <Compile Include="Controller\C_Stock.cs" />
     <Compile Include="Controller\C_Tipo.cs" />
+    <Compile Include="Model\M_Ciudad.cs" />
+    <Compile Include="Model\M_Depto.cs" />
     <Compile Include="Model\M_Item.cs" />
     <Compile Include="Model\M_Sesion.cs" />
+    <Compile Include="Model\M_Stock.cs" />
     <Compile Include="Model\M_Tipo.cs" />
+    <Compile Include="View\Dialogs\Ciudad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dialogs\Ciudad.Designer.cs">
+      <DependentUpon>Ciudad.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Dialogs\Item_Dialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,12 +109,21 @@
     <Compile Include="View\UserControls\UC_Productos.Designer.cs">
       <DependentUpon>UC_Productos.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UserControls\UC_Sucursal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\UC_Sucursal.Designer.cs">
+      <DependentUpon>UC_Sucursal.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Vendedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Vendedor.Designer.cs">
       <DependentUpon>Vendedor.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Dialogs\Ciudad.resx">
+      <DependentUpon>Ciudad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Dialogs\Item_Dialog.resx">
       <DependentUpon>Item_Dialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +151,9 @@
     <EmbeddedResource Include="View\UserControls\UC_Productos.resx">
       <DependentUpon>UC_Productos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\UC_Sucursal.resx">
+      <DependentUpon>UC_Sucursal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Vendedor.resx">
       <DependentUpon>Vendedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,9 +170,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="assets\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

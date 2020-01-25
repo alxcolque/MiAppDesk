@@ -35,8 +35,6 @@
             this.animacion1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.pnlSidebar = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.lblAdmin = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGraficos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panelAct = new System.Windows.Forms.Panel();
             this.btnVentas = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -44,14 +42,18 @@
             this.btnClientes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnItems = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnStock = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lblAdmin = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMenu = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pnlCuerpo = new System.Windows.Forms.Panel();
+            this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.curvaSidebar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.tiempoReal = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.animacion2 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.pnlCuerpo = new System.Windows.Forms.Panel();
-            this.pnlSuperior = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnUsuarios = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnSucursal = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlLeft.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,6 +101,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
             this.pnlSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlSidebar.Controls.Add(this.btnSucursal);
+            this.pnlSidebar.Controls.Add(this.btnUsuarios);
             this.pnlSidebar.Controls.Add(this.btnGraficos);
             this.pnlSidebar.Controls.Add(this.panelAct);
             this.pnlSidebar.Controls.Add(this.btnVentas);
@@ -118,43 +122,13 @@
             this.pnlSidebar.Size = new System.Drawing.Size(182, 567);
             this.pnlSidebar.TabIndex = 0;
             // 
-            // lblAdmin
-            // 
-            this.lblAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblAdmin.AutoSize = true;
-            this.lblAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.animacion1.SetDecoration(this.lblAdmin, BunifuAnimatorNS.DecorationType.None);
-            this.animacion2.SetDecoration(this.lblAdmin, BunifuAnimatorNS.DecorationType.None);
-            this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmin.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblAdmin.Location = new System.Drawing.Point(830, 21);
-            this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(75, 25);
-            this.lblAdmin.TabIndex = 1;
-            this.lblAdmin.Text = "admin";
-            this.lblAdmin.Click += new System.EventHandler(this.lblAdmin_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.animacion1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.animacion2.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(911, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnGraficos
             // 
             this.btnGraficos.Activecolor = System.Drawing.Color.Transparent;
             this.btnGraficos.BackColor = System.Drawing.Color.Transparent;
             this.btnGraficos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGraficos.BorderRadius = 0;
-            this.btnGraficos.ButtonText = "    Gráficos";
+            this.btnGraficos.ButtonText = "&GRÁFICOS";
             this.btnGraficos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.animacion2.SetDecoration(this.btnGraficos, BunifuAnimatorNS.DecorationType.None);
             this.animacion1.SetDecoration(this.btnGraficos, BunifuAnimatorNS.DecorationType.None);
@@ -171,7 +145,7 @@
             this.btnGraficos.IconVisible = true;
             this.btnGraficos.IconZoom = 50D;
             this.btnGraficos.IsTab = false;
-            this.btnGraficos.Location = new System.Drawing.Point(10, 364);
+            this.btnGraficos.Location = new System.Drawing.Point(4, 394);
             this.btnGraficos.Name = "btnGraficos";
             this.btnGraficos.Normalcolor = System.Drawing.Color.Transparent;
             this.btnGraficos.OnHovercolor = System.Drawing.Color.Crimson;
@@ -179,10 +153,11 @@
             this.btnGraficos.selected = false;
             this.btnGraficos.Size = new System.Drawing.Size(168, 48);
             this.btnGraficos.TabIndex = 15;
-            this.btnGraficos.Text = "    Gráficos";
-            this.btnGraficos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGraficos.Text = "&GRÁFICOS";
+            this.btnGraficos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGraficos.Textcolor = System.Drawing.Color.White;
             this.btnGraficos.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraficos.Click += new System.EventHandler(this.btnGraficos_Click);
             // 
             // panelAct
             // 
@@ -191,7 +166,7 @@
             this.animacion1.SetDecoration(this.panelAct, BunifuAnimatorNS.DecorationType.None);
             this.panelAct.Location = new System.Drawing.Point(3, 17);
             this.panelAct.Name = "panelAct";
-            this.panelAct.Size = new System.Drawing.Size(10, 48);
+            this.panelAct.Size = new System.Drawing.Size(10, 43);
             this.panelAct.TabIndex = 14;
             // 
             // btnVentas
@@ -217,7 +192,7 @@
             this.btnVentas.IconVisible = true;
             this.btnVentas.IconZoom = 50D;
             this.btnVentas.IsTab = false;
-            this.btnVentas.Location = new System.Drawing.Point(8, 290);
+            this.btnVentas.Location = new System.Drawing.Point(3, 232);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Normalcolor = System.Drawing.Color.Transparent;
             this.btnVentas.OnHovercolor = System.Drawing.Color.Crimson;
@@ -229,6 +204,7 @@
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentas.Textcolor = System.Drawing.Color.White;
             this.btnVentas.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // btnPrincipal
             // 
@@ -253,7 +229,7 @@
             this.btnPrincipal.IconVisible = true;
             this.btnPrincipal.IconZoom = 50D;
             this.btnPrincipal.IsTab = false;
-            this.btnPrincipal.Location = new System.Drawing.Point(8, 16);
+            this.btnPrincipal.Location = new System.Drawing.Point(3, 16);
             this.btnPrincipal.Name = "btnPrincipal";
             this.btnPrincipal.Normalcolor = System.Drawing.Color.Transparent;
             this.btnPrincipal.OnHovercolor = System.Drawing.Color.Crimson;
@@ -290,7 +266,7 @@
             this.btnClientes.IconVisible = true;
             this.btnClientes.IconZoom = 50D;
             this.btnClientes.IsTab = false;
-            this.btnClientes.Location = new System.Drawing.Point(8, 220);
+            this.btnClientes.Location = new System.Drawing.Point(4, 178);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Normalcolor = System.Drawing.Color.Transparent;
             this.btnClientes.OnHovercolor = System.Drawing.Color.Crimson;
@@ -302,6 +278,7 @@
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClientes.Textcolor = System.Drawing.Color.White;
             this.btnClientes.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnItems
             // 
@@ -326,13 +303,13 @@
             this.btnItems.IconVisible = true;
             this.btnItems.IconZoom = 50D;
             this.btnItems.IsTab = false;
-            this.btnItems.Location = new System.Drawing.Point(10, 80);
+            this.btnItems.Location = new System.Drawing.Point(3, 70);
             this.btnItems.Name = "btnItems";
             this.btnItems.Normalcolor = System.Drawing.Color.Transparent;
             this.btnItems.OnHovercolor = System.Drawing.Color.Crimson;
             this.btnItems.OnHoverTextColor = System.Drawing.Color.White;
             this.btnItems.selected = false;
-            this.btnItems.Size = new System.Drawing.Size(172, 48);
+            this.btnItems.Size = new System.Drawing.Size(175, 48);
             this.btnItems.TabIndex = 9;
             this.btnItems.Text = "      PRODUCTOS";
             this.btnItems.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -363,7 +340,7 @@
             this.btnStock.IconVisible = true;
             this.btnStock.IconZoom = 50D;
             this.btnStock.IsTab = false;
-            this.btnStock.Location = new System.Drawing.Point(8, 151);
+            this.btnStock.Location = new System.Drawing.Point(4, 124);
             this.btnStock.Name = "btnStock";
             this.btnStock.Normalcolor = System.Drawing.Color.Transparent;
             this.btnStock.OnHovercolor = System.Drawing.Color.Crimson;
@@ -375,6 +352,37 @@
             this.btnStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStock.Textcolor = System.Drawing.Color.White;
             this.btnStock.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
+            // 
+            // lblAdmin
+            // 
+            this.lblAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAdmin.AutoSize = true;
+            this.lblAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.animacion1.SetDecoration(this.lblAdmin, BunifuAnimatorNS.DecorationType.None);
+            this.animacion2.SetDecoration(this.lblAdmin, BunifuAnimatorNS.DecorationType.None);
+            this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmin.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblAdmin.Location = new System.Drawing.Point(830, 21);
+            this.lblAdmin.Name = "lblAdmin";
+            this.lblAdmin.Size = new System.Drawing.Size(75, 25);
+            this.lblAdmin.TabIndex = 1;
+            this.lblAdmin.Text = "admin";
+            this.lblAdmin.Click += new System.EventHandler(this.lblAdmin_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.animacion1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.animacion2.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(911, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(61, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btnMenu
             // 
@@ -392,36 +400,6 @@
             this.btnMenu.TabStop = false;
             this.btnMenu.Zoom = 10;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // curvaSidebar
-            // 
-            this.curvaSidebar.ElipseRadius = 10;
-            this.curvaSidebar.TargetControl = this.pnlSidebar;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
-            // 
-            // animacion2
-            // 
-            this.animacion2.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
-            this.animacion2.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.animacion2.DefaultAnimation = animation4;
             // 
             // pnlCuerpo
             // 
@@ -461,6 +439,110 @@
             this.label1.Size = new System.Drawing.Size(125, 25);
             this.label1.TabIndex = 16;
             this.label1.Text = "Supervisor";
+            // 
+            // curvaSidebar
+            // 
+            this.curvaSidebar.ElipseRadius = 10;
+            this.curvaSidebar.TargetControl = this.pnlSidebar;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // animacion2
+            // 
+            this.animacion2.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
+            this.animacion2.Cursor = null;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.animacion2.DefaultAnimation = animation4;
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Activecolor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUsuarios.BorderRadius = 0;
+            this.btnUsuarios.ButtonText = "&USUARIOS";
+            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.animacion2.SetDecoration(this.btnUsuarios, BunifuAnimatorNS.DecorationType.None);
+            this.animacion1.SetDecoration(this.btnUsuarios, BunifuAnimatorNS.DecorationType.None);
+            this.btnUsuarios.DisabledColor = System.Drawing.Color.Gray;
+            this.btnUsuarios.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Iconimage")));
+            this.btnUsuarios.Iconimage_right = null;
+            this.btnUsuarios.Iconimage_right_Selected = null;
+            this.btnUsuarios.Iconimage_Selected = null;
+            this.btnUsuarios.IconMarginLeft = 0;
+            this.btnUsuarios.IconMarginRight = 0;
+            this.btnUsuarios.IconRightVisible = true;
+            this.btnUsuarios.IconRightZoom = 0D;
+            this.btnUsuarios.IconVisible = true;
+            this.btnUsuarios.IconZoom = 50D;
+            this.btnUsuarios.IsTab = false;
+            this.btnUsuarios.Location = new System.Drawing.Point(2, 286);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.OnHovercolor = System.Drawing.Color.Crimson;
+            this.btnUsuarios.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnUsuarios.selected = false;
+            this.btnUsuarios.Size = new System.Drawing.Size(176, 48);
+            this.btnUsuarios.TabIndex = 16;
+            this.btnUsuarios.Text = "&USUARIOS";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUsuarios.Textcolor = System.Drawing.Color.White;
+            this.btnUsuarios.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // btnSucursal
+            // 
+            this.btnSucursal.Activecolor = System.Drawing.Color.Transparent;
+            this.btnSucursal.BackColor = System.Drawing.Color.Transparent;
+            this.btnSucursal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSucursal.BorderRadius = 0;
+            this.btnSucursal.ButtonText = "&SUCURSALES";
+            this.btnSucursal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.animacion2.SetDecoration(this.btnSucursal, BunifuAnimatorNS.DecorationType.None);
+            this.animacion1.SetDecoration(this.btnSucursal, BunifuAnimatorNS.DecorationType.None);
+            this.btnSucursal.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSucursal.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSucursal.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSucursal.Iconimage")));
+            this.btnSucursal.Iconimage_right = null;
+            this.btnSucursal.Iconimage_right_Selected = null;
+            this.btnSucursal.Iconimage_Selected = null;
+            this.btnSucursal.IconMarginLeft = 0;
+            this.btnSucursal.IconMarginRight = 0;
+            this.btnSucursal.IconRightVisible = true;
+            this.btnSucursal.IconRightZoom = 0D;
+            this.btnSucursal.IconVisible = true;
+            this.btnSucursal.IconZoom = 50D;
+            this.btnSucursal.IsTab = false;
+            this.btnSucursal.Location = new System.Drawing.Point(12, 340);
+            this.btnSucursal.Name = "btnSucursal";
+            this.btnSucursal.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnSucursal.OnHovercolor = System.Drawing.Color.Crimson;
+            this.btnSucursal.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSucursal.selected = false;
+            this.btnSucursal.Size = new System.Drawing.Size(168, 48);
+            this.btnSucursal.TabIndex = 17;
+            this.btnSucursal.Text = "&SUCURSALES";
+            this.btnSucursal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSucursal.Textcolor = System.Drawing.Color.White;
+            this.btnSucursal.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSucursal.Click += new System.EventHandler(this.btnSucursal_Click);
             // 
             // Principal
             // 
@@ -507,5 +589,7 @@
         private System.Windows.Forms.Panel pnlCuerpo;
         private System.Windows.Forms.Panel pnlSuperior;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSucursal;
+        private Bunifu.Framework.UI.BunifuFlatButton btnUsuarios;
     }
 }

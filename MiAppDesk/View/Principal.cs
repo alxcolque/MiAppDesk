@@ -101,6 +101,37 @@ namespace MiAppDesk.View
 
         }
 
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSucursal_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnSucursal);
+            UC_Sucursal uch = new UC_Sucursal();
+            AddControlsToPanel(uch);
+        }
+
+        private void btnGraficos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
