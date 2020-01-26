@@ -126,6 +126,36 @@ namespace MiAppDesk.Model
                 throw new Exception("Error !!!");
             }
         }
-        
+        //Listar para combobox
+        public List<C_CiudadCombo> ListarC(string id)
+        {
+
+            List<C_CiudadCombo> Listar = new List<C_CiudadCombo>();
+            using (MySqlCommand command = new MySqlCommand())
+            {
+                StringBuilder Query = new StringBuilder();
+                abrirConexion();
+                Query.Append("SELECT * FROM ciudades WHERE depto_id = '" + Int32.Parse(id) + "'");
+
+                command.CommandType = System.Data.CommandType.Text;
+                command.CommandText = Query.ToString();
+
+                MySqlDataReader reader = null;
+                command.Connection = conn;
+                reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Listar.Add(new C_CiudadCombo
+                    {
+                        IdCi = reader.GetInt32(0),
+                        NombreCi = reader.GetString(1)
+                    });
+                }
+                conn.Close();
+                reader.Close();
+            }
+            return Listar;
+        }
+
     }
 }
