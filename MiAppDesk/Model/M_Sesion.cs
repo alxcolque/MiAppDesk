@@ -27,7 +27,7 @@ namespace MiAppDesk.Model
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error de conexion");
+                MessageBox.Show("Error de conexion"+ex);
                 Application.Exit();
                 throw new Exception("Error !!!");
             }
@@ -57,7 +57,7 @@ namespace MiAppDesk.Model
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al Validar usuario");
+                MessageBox.Show("Error al Validar usuario"+ex);
                 throw new Exception("Error !!!");
             }
 

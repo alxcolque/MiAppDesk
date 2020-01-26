@@ -22,3 +22,6 @@ C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debu
 C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.UserControls.UC_Sucursal.resources
 C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.Ciudad.resources
 C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.Dialogs.Sucursal_Dialog.resources
+C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.UserControls.UC_Usuario.resources
+C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.Dialogs.Rol_Dialog.resources
+C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.Dialogs.Usuario_Dialog.resources

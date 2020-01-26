@@ -118,7 +118,9 @@ namespace MiAppDesk.View
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-
+            moveSidePanel(btnUsuarios);
+            UC_Usuario uch = new UC_Usuario();
+            AddControlsToPanel(uch);
         }
 
         private void btnSucursal_Click(object sender, EventArgs e)

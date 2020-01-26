@@ -126,6 +126,7 @@ namespace MiAppDesk.View.Dialogs
                     
                     obj.Insertar(obj);
                     MessageBox.Show("Se guardó el registro ");
+                    this.Close();
                     /*datostabla("");
                     limpiar();*/
                 }

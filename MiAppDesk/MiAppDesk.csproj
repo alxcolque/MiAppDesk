@@ -57,17 +57,21 @@
     <Compile Include="Controller\C_CiudadCombo.cs" />
     <Compile Include="Controller\C_Depto.cs" />
     <Compile Include="Controller\C_Item.cs" />
+    <Compile Include="Controller\C_Rol.cs" />
     <Compile Include="Controller\C_Sesion.cs" />
     <Compile Include="Controller\C_Stock.cs" />
     <Compile Include="Controller\C_Sucursal.cs" />
     <Compile Include="Controller\C_Tipo.cs" />
+    <Compile Include="Controller\C_Usuario.cs" />
     <Compile Include="Model\M_Ciudad.cs" />
     <Compile Include="Model\M_Depto.cs" />
     <Compile Include="Model\M_Item.cs" />
+    <Compile Include="Model\M_Rol.cs" />
     <Compile Include="Model\M_Sesion.cs" />
     <Compile Include="Model\M_Stock.cs" />
     <Compile Include="Model\M_Sucursal.cs" />
     <Compile Include="Model\M_Tipo.cs" />
+    <Compile Include="Model\M_Usuario.cs" />
     <Compile Include="View\Dialogs\Ciudad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +84,12 @@
     <Compile Include="View\Dialogs\Item_Dialog.Designer.cs">
       <DependentUpon>Item_Dialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Dialogs\Rol_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dialogs\Rol_Dialog.Designer.cs">
+      <DependentUpon>Rol_Dialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Dialogs\Sucursal_Dialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +101,12 @@
     </Compile>
     <Compile Include="View\Dialogs\Tipos.Designer.cs">
       <DependentUpon>Tipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialogs\Usuario_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dialogs\Usuario_Dialog.Designer.cs">
+      <DependentUpon>Usuario_Dialog.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
@@ -124,6 +140,12 @@
     <Compile Include="View\UserControls\UC_Sucursal.Designer.cs">
       <DependentUpon>UC_Sucursal.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UserControls\UC_Usuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\UC_Usuario.Designer.cs">
+      <DependentUpon>UC_Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Vendedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,11 +158,17 @@
     <EmbeddedResource Include="View\Dialogs\Item_Dialog.resx">
       <DependentUpon>Item_Dialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Dialogs\Rol_Dialog.resx">
+      <DependentUpon>Rol_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Dialogs\Sucursal_Dialog.resx">
       <DependentUpon>Sucursal_Dialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Dialogs\Tipos.resx">
       <DependentUpon>Tipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dialogs\Usuario_Dialog.resx">
+      <DependentUpon>Usuario_Dialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -165,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\UC_Sucursal.resx">
       <DependentUpon>UC_Sucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\UC_Usuario.resx">
+      <DependentUpon>UC_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Vendedor.resx">
       <DependentUpon>Vendedor.cs</DependentUpon>

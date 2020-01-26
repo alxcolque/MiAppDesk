@@ -11,10 +11,9 @@ using MySql.Data.MySqlClient;
 using System.Configuration;
 using MiAppDesk.View.UserControls;
 
-
 namespace MiAppDesk.Model
 {
-    public class M_Ciudad
+    public class M_Rol
     {
         internal static MySqlConnection conn = null;
         private void abrirConexion()
@@ -33,15 +32,15 @@ namespace MiAppDesk.Model
                 throw new Exception("Error !!!");
             }
         }
-        public List<C_Ciudad> ListarI(String lista)
+        public List<C_Rol> ListarI(String lista)
         {
 
-            List<C_Ciudad> Listar = new List<C_Ciudad>();
+            List<C_Rol> Listar = new List<C_Rol>();
             using (MySqlCommand command = new MySqlCommand())
             {
                 StringBuilder Query = new StringBuilder();
                 abrirConexion();
-                Query.Append("SELECT c.ciudad_id,c.nombre,d.nombre FROM ciudades c, departamentos d WHERE c.depto_id = d.depto_id AND c.nombre LIKE '" + lista + "' '%';");
+                Query.Append("SELECT * FROM roles WHERE nombre LIKE '" + lista + "' '%';");
 
                 command.CommandType = System.Data.CommandType.Text;
                 command.CommandText = Query.ToString();
@@ -51,11 +50,10 @@ namespace MiAppDesk.Model
                 reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    Listar.Add(new C_Ciudad
+                    Listar.Add(new C_Rol
                     {
                         ID = reader.GetInt32(0),
-                        Ciudad = reader.GetString(1),
-                        Departamento = reader.GetString(2),
+                        Nombre = reader.GetString(1)
 
                     });
                 }
@@ -64,23 +62,23 @@ namespace MiAppDesk.Model
             }
             return Listar;
         }
-        public void Insertar(C_Ciudad Dato)
+        public void Insertar(C_Rol Dato)
         {
             try
             {
                 abrirConexion();
-                MySqlCommand cmd1 = new MySqlCommand("SELECT COUNT(*) FROM ciudades", conn);
+                MySqlCommand cmd1 = new MySqlCommand("SELECT COUNT(*) FROM roles", conn);
                 string id = (cmd1.ExecuteScalar()).ToString();
                 if (Convert.ToInt32(id) > 0)
                 {
-                    MySqlCommand idmax = new MySqlCommand("SELECT MAX(ciudad_id) FROM ciudades", conn);
+                    MySqlCommand idmax = new MySqlCommand("SELECT MAX(rol_id) FROM roles", conn);
                     string _id = (idmax.ExecuteScalar()).ToString();
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO ciudades (ciudad_id,nombre,depto_id) VALUES ('" + (Convert.ToInt32(_id) + 1) + "', '" + Dato.Ciudad + "', '" + C_Ciudad.IdDepto + "')", conn);
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO roles (rol_id,nombre) VALUES ('" + (Convert.ToInt32(_id) + 1) + "', '" + Dato.Nombre +"')", conn);
                     cmd.ExecuteNonQuery();
                 }
                 else
                 {
-                    MySqlCommand cmd3 = new MySqlCommand("INSERT INTO ciudades (ciudad_id,nombre,depto_id) VALUES ('" + 1 + "', '" + Dato.Ciudad + "', '" + C_Ciudad.IdDepto + "')", conn);
+                    MySqlCommand cmd3 = new MySqlCommand("INSERT INTO roles (rol_id,nombre) VALUES ('" + 1 + "', '" + Dato.Nombre + "')", conn);
                     cmd3.ExecuteNonQuery();
                 }
 
@@ -88,16 +86,16 @@ namespace MiAppDesk.Model
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al registrar Ciudad " + ex);
+                MessageBox.Show("Error al registrar" + ex);
                 throw new Exception("Error !!!");
             }
         }
-        public void Editar(C_Ciudad Dato)
+        public void Editar(C_Rol Dato)
         {
             try
             {
                 abrirConexion();
-                MySqlCommand cmd = new MySqlCommand("UPDATE ciudades SET nombre = '" + Dato.Ciudad + "',depto_id = '" + C_Ciudad.IdDepto + "'WHERE ciudad_id = '" + C_Ciudad.IdCiudad + "'", conn);
+                MySqlCommand cmd = new MySqlCommand("UPDATE roles SET nombre = '" + Dato.Nombre + "'WHERE rol_id = '" + Dato.ID + "'", conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
@@ -107,13 +105,13 @@ namespace MiAppDesk.Model
                 throw new Exception("Error !!!");
             }
         }
-        public void Eliminar(C_Ciudad Dato)
+        public void Eliminar(C_Rol Dato)
         {
             try
             {
                 abrirConexion();
-                MySqlCommand cmd = new MySqlCommand("DELETE FROM ciudades WHERE ciudad_id = '" + Dato.ID + "'", conn);
-                if (MessageBox.Show("¿Está seguro que que desea eliminar '" + Dato.Ciudad + "'?", "¡Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                MySqlCommand cmd = new MySqlCommand("DELETE FROM roles WHERE rol_id = '" + Dato.ID + "'", conn);
+                if (MessageBox.Show("¿Está seguro que que desea eliminar '" + Dato.Nombre + "'?", "¡Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     cmd.ExecuteNonQuery();
                 }
@@ -126,36 +124,5 @@ namespace MiAppDesk.Model
                 throw new Exception("Error !!!");
             }
         }
-        //Listar para combobox
-        public List<C_CiudadCombo> ListarC(string id)
-        {
-
-            List<C_CiudadCombo> Listar = new List<C_CiudadCombo>();
-            using (MySqlCommand command = new MySqlCommand())
-            {
-                StringBuilder Query = new StringBuilder();
-                abrirConexion();
-                Query.Append("SELECT * FROM ciudades WHERE depto_id = '" + Int32.Parse(id) + "'");
-
-                command.CommandType = System.Data.CommandType.Text;
-                command.CommandText = Query.ToString();
-
-                MySqlDataReader reader = null;
-                command.Connection = conn;
-                reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    Listar.Add(new C_CiudadCombo
-                    {
-                        IdCi = reader.GetInt32(0),
-                        NombreCi = reader.GetString(1)
-                    });
-                }
-                conn.Close();
-                reader.Close();
-            }
-            return Listar;
-        }
-
     }
 }

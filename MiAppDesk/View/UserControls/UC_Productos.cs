@@ -18,7 +18,7 @@ namespace MiAppDesk.View.UserControls
     public partial class UC_Productos : UserControl
     {
 
-        private string id;//Ayuda Editar y eliminar
+        //private string id;//Ayuda Editar y eliminar
         private bool editarse = false;
         //Invocando a las clases claves
         C_Item objC = new C_Item();

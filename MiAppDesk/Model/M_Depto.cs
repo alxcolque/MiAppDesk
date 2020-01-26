@@ -28,7 +28,7 @@ namespace MiAppDesk.Model
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error de conexion");
+                MessageBox.Show("Error de conexion"+ex);
                 Application.Exit();
                 throw new Exception("Error !!!");
             }
