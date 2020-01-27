@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Controller\C_Ciudad.cs" />
     <Compile Include="Controller\C_CiudadCombo.cs" />
+    <Compile Include="Controller\C_Cliente.cs" />
     <Compile Include="Controller\C_Depto.cs" />
     <Compile Include="Controller\C_Item.cs" />
     <Compile Include="Controller\C_Rol.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Controller\C_Tipo.cs" />
     <Compile Include="Controller\C_Usuario.cs" />
     <Compile Include="Model\M_Ciudad.cs" />
+    <Compile Include="Model\M_Cliente.cs" />
     <Compile Include="Model\M_Depto.cs" />
     <Compile Include="Model\M_Item.cs" />
     <Compile Include="Model\M_Rol.cs" />
@@ -77,6 +79,12 @@
     </Compile>
     <Compile Include="View\Dialogs\Ciudad.Designer.cs">
       <DependentUpon>Ciudad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialogs\Cliente_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dialogs\Cliente_Dialog.Designer.cs">
+      <DependentUpon>Cliente_Dialog.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Dialogs\Item_Dialog.cs">
       <SubType>Form</SubType>
@@ -122,6 +130,12 @@
     <Compile Include="View\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UserControls\UC_Cliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\UC_Cliente.Designer.cs">
+      <DependentUpon>UC_Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserControls\UC_Inicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +169,9 @@
     <EmbeddedResource Include="View\Dialogs\Ciudad.resx">
       <DependentUpon>Ciudad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Dialogs\Cliente_Dialog.resx">
+      <DependentUpon>Cliente_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Dialogs\Item_Dialog.resx">
       <DependentUpon>Item_Dialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +201,9 @@
     </Compile>
     <EmbeddedResource Include="View\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\UC_Cliente.resx">
+      <DependentUpon>UC_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\UC_Inicio.resx">
       <DependentUpon>UC_Inicio.cs</DependentUpon>
