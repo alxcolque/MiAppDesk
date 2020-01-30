@@ -1,6 +1,6 @@
 ﻿namespace MiAppDesk.View.UserControls
 {
-    partial class UC_Cliente
+    partial class UC_Stock
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,12 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Cliente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Stock));
             this.dgvCli = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnModificar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnNuevo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtBuscar = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunificbuscar = new Bunifu.Framework.UI.BunifuTextbox();
@@ -74,7 +73,7 @@
             this.dgvCli.EnableHeadersVisualStyles = false;
             this.dgvCli.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.dgvCli.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvCli.Location = new System.Drawing.Point(77, 139);
+            this.dgvCli.Location = new System.Drawing.Point(110, 134);
             this.dgvCli.Name = "dgvCli";
             this.dgvCli.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvCli.RowHeadersVisible = false;
@@ -82,8 +81,8 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvCli.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCli.Size = new System.Drawing.Size(649, 399);
-            this.dgvCli.TabIndex = 111;
+            this.dgvCli.Size = new System.Drawing.Size(542, 365);
+            this.dgvCli.TabIndex = 118;
             // 
             // panel4
             // 
@@ -94,7 +93,7 @@
             this.panel4.Location = new System.Drawing.Point(3, 17);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(778, 42);
-            this.panel4.TabIndex = 109;
+            this.panel4.TabIndex = 116;
             // 
             // label1
             // 
@@ -103,9 +102,9 @@
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(3, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
+            this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Clientes";
+            this.label1.Text = "Stocks";
             // 
             // btnEliminar
             // 
@@ -138,50 +137,12 @@
             this.btnEliminar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEliminar.selected = false;
             this.btnEliminar.Size = new System.Drawing.Size(122, 35);
-            this.btnEliminar.TabIndex = 115;
+            this.btnEliminar.TabIndex = 122;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar.Textcolor = System.Drawing.Color.White;
             this.btnEliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Activecolor = System.Drawing.Color.Teal;
-            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnModificar.BorderRadius = 0;
-            this.btnModificar.ButtonText = "EDITAR";
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnModificar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnModificar.Iconimage")));
-            this.btnModificar.Iconimage_right = null;
-            this.btnModificar.Iconimage_right_Selected = null;
-            this.btnModificar.Iconimage_Selected = null;
-            this.btnModificar.IconMarginLeft = 0;
-            this.btnModificar.IconMarginRight = 0;
-            this.btnModificar.IconRightVisible = true;
-            this.btnModificar.IconRightZoom = 0D;
-            this.btnModificar.IconVisible = true;
-            this.btnModificar.IconZoom = 30D;
-            this.btnModificar.IsTab = false;
-            this.btnModificar.Location = new System.Drawing.Point(395, 94);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Normalcolor = System.Drawing.SystemColors.HotTrack;
-            this.btnModificar.OnHovercolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnModificar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnModificar.selected = false;
-            this.btnModificar.Size = new System.Drawing.Size(116, 35);
-            this.btnModificar.TabIndex = 114;
-            this.btnModificar.Text = "EDITAR";
-            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnModificar.Textcolor = System.Drawing.Color.White;
-            this.btnModificar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnNuevo
             // 
@@ -206,7 +167,7 @@
             this.btnNuevo.IconVisible = true;
             this.btnNuevo.IconZoom = 30D;
             this.btnNuevo.IsTab = false;
-            this.btnNuevo.Location = new System.Drawing.Point(277, 94);
+            this.btnNuevo.Location = new System.Drawing.Point(401, 94);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Normalcolor = System.Drawing.Color.SeaGreen;
@@ -214,7 +175,7 @@
             this.btnNuevo.OnHoverTextColor = System.Drawing.Color.White;
             this.btnNuevo.selected = false;
             this.btnNuevo.Size = new System.Drawing.Size(110, 35);
-            this.btnNuevo.TabIndex = 113;
+            this.btnNuevo.TabIndex = 120;
             this.btnNuevo.Text = "NUEVO";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNuevo.Textcolor = System.Drawing.Color.White;
@@ -229,11 +190,11 @@
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.txtBuscar.Location = new System.Drawing.Point(126, 99);
+            this.txtBuscar.Location = new System.Drawing.Point(159, 94);
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(125, 27);
-            this.txtBuscar.TabIndex = 112;
+            this.txtBuscar.TabIndex = 119;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // bunificbuscar
@@ -246,28 +207,27 @@
             this.bunificbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunificbuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(60)))));
             this.bunificbuscar.Icon = ((System.Drawing.Image)(resources.GetObject("bunificbuscar.Icon")));
-            this.bunificbuscar.Location = new System.Drawing.Point(77, 92);
+            this.bunificbuscar.Location = new System.Drawing.Point(110, 87);
             this.bunificbuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunificbuscar.Name = "bunificbuscar";
             this.bunificbuscar.Size = new System.Drawing.Size(189, 40);
-            this.bunificbuscar.TabIndex = 110;
+            this.bunificbuscar.TabIndex = 117;
             this.bunificbuscar.text = "";
             // 
-            // UC_Cliente
+            // UC_Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Controls.Add(this.dgvCli);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.bunificbuscar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UC_Cliente";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "UC_Stock";
             this.Size = new System.Drawing.Size(784, 597);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCli)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -283,7 +243,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuFlatButton btnEliminar;
-        private Bunifu.Framework.UI.BunifuFlatButton btnModificar;
         private Bunifu.Framework.UI.BunifuFlatButton btnNuevo;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtBuscar;
         private Bunifu.Framework.UI.BunifuTextbox bunificbuscar;
