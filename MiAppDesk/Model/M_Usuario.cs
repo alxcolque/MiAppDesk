@@ -42,7 +42,7 @@ namespace MiAppDesk.Model
             {
                 StringBuilder Query = new StringBuilder();
                 abrirConexion();
-                Query.Append("SELECT u.usuario_id, u.nombre, u.nombre_usuario,u.clave,r.nombre FROM usuarios u, roles r WHERE u.rol_id = r.rol_id AND u.nombre LIKE '" + lista + "' '%';");
+                Query.Append("SELECT u.usuario_id, u.nombre, u.nombre_usuario,u.clave,r.nombre,s.nombre FROM usuarios u, roles r, sucursales s WHERE u.rol_id = r.rol_id AND u.sucursal_id=s.sucursal_id AND u.nombre LIKE '" + lista + "' '%';");
 
                 command.CommandType = System.Data.CommandType.Text;
                 command.CommandText = Query.ToString();
@@ -59,7 +59,7 @@ namespace MiAppDesk.Model
                         Usuario = reader.GetString(2),
                         Clave = reader.GetString(3),
                         Cargo = reader.GetString(4),
-
+                        Sucursal = reader.GetString(5),
                     });
                 }
                 conn.Close();
@@ -78,12 +78,12 @@ namespace MiAppDesk.Model
                 {
                     MySqlCommand idmax = new MySqlCommand("SELECT MAX(usuario_id) FROM usuarios", conn);
                     string _id = (idmax.ExecuteScalar()).ToString();
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO usuarios (usuario_id,nombre,nombre_usuario,clave,rol_id) VALUES ('" + (Convert.ToInt32(_id) + 1) + "', '" + Dato.Nombre + "', '" + Dato.Usuario + "', '" + Dato.Clave + "', '" + C_Usuario.IdRol + "')", conn);
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO usuarios (usuario_id,nombre,nombre_usuario,clave,rol_id,sucursal_id) VALUES ('" + (Convert.ToInt32(_id) + 1) + "', '" + Dato.Nombre + "', '" + Dato.Usuario + "', '" + Dato.Clave + "', '" + C_Usuario.IdRol + "', '" + C_Usuario.IdSuc + "')", conn);
                     cmd.ExecuteNonQuery();
                 }
                 else
                 {
-                    MySqlCommand cmd3 = new MySqlCommand("INSERT INTO usuarios (usuario_id,nombre,nombre_usuario,clave,rol_id) VALUES ('" + 1 + "', '" + Dato.Nombre + "', '" + Dato.Usuario + "', '" + Dato.Clave + "', '" + C_Usuario.IdRol + "')", conn);
+                    MySqlCommand cmd3 = new MySqlCommand("INSERT INTO usuarios (usuario_id,nombre,nombre_usuario,clave,rol_id,sucursal_id) VALUES ('" + 1 + "', '" + Dato.Nombre + "', '" + Dato.Usuario + "', '" + Dato.Clave + "', '" + C_Usuario.IdRol + "', '" + C_Usuario.IdSuc + "')", conn);
                     cmd3.ExecuteNonQuery();
                 }
 
@@ -100,7 +100,7 @@ namespace MiAppDesk.Model
             try
             {
                 abrirConexion();
-                MySqlCommand cmd = new MySqlCommand("UPDATE usuarios SET nombre = '" + Dato.Nombre + "',nombre_usuario = '" + Dato.Usuario + "',clave = '" + Dato.Clave + "',rol_id = '" + C_Usuario.IdRol + "'WHERE usuario_id = '" + C_Usuario.IdUsuario + "'", conn);
+                MySqlCommand cmd = new MySqlCommand("UPDATE usuarios SET nombre = '" + Dato.Nombre + "',nombre_usuario = '" + Dato.Usuario + "',clave = '" + Dato.Clave + "',rol_id = '" + C_Usuario.IdRol + "',sucursal_id = '" + C_Usuario.IdSuc + "'WHERE usuario_id = '" + C_Usuario.IdUsuario + "'", conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }

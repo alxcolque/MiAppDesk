@@ -15,9 +15,11 @@ namespace MiAppDesk.Controller
         private string _Usuario;
         private string _Clave;
         private string _Cargo;
+        private string _Sucursal;
         //Variables státicas
         public static int IdUsuario;
         public static int IdRol;
+        public static int IdSuc;
         public static string nom;
         public static string usu;
         public static string cla;
@@ -90,6 +92,20 @@ namespace MiAppDesk.Controller
                 _Cargo = value;
             }
         }
+
+        public string Sucursal
+        {
+            get
+            {
+                return _Sucursal;
+            }
+
+            set
+            {
+                _Sucursal = value;
+            }
+        }
+
         //Metodos de CRUD
         public List<C_Usuario> Listado(string buscar)
         {

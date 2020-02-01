@@ -57,6 +57,7 @@
     <Compile Include="Controller\C_CiudadCombo.cs" />
     <Compile Include="Controller\C_Cliente.cs" />
     <Compile Include="Controller\C_Depto.cs" />
+    <Compile Include="Controller\C_Inicio.cs" />
     <Compile Include="Controller\C_Item.cs" />
     <Compile Include="Controller\C_Rol.cs" />
     <Compile Include="Controller\C_Sesion.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Model\M_Ciudad.cs" />
     <Compile Include="Model\M_Cliente.cs" />
     <Compile Include="Model\M_Depto.cs" />
+    <Compile Include="Model\M_Inicio.cs" />
     <Compile Include="Model\M_Item.cs" />
     <Compile Include="Model\M_Rol.cs" />
     <Compile Include="Model\M_Sesion.cs" />

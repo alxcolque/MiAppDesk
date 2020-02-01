@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             this.animacion1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.pnlSidebar = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnSucursal = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnUsuarios = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnGraficos = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panelAct = new System.Windows.Forms.Panel();
             this.btnVentas = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPrincipal = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnClientes = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -54,6 +53,7 @@
             this.tiempoReal = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.animacion2 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.panelAct = new System.Windows.Forms.Panel();
             this.pnlLeft.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,22 +65,22 @@
             // 
             this.animacion1.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
             this.animacion1.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 0F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 20;
-            animation5.Padding = new System.Windows.Forms.Padding(30);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 0F;
-            animation5.TransparencyCoeff = 0F;
-            this.animacion1.DefaultAnimation = animation5;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 20;
+            animation3.Padding = new System.Windows.Forms.Padding(30);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.animacion1.DefaultAnimation = animation3;
             // 
             // pnlLeft
             // 
@@ -101,10 +101,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
             this.pnlSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlSidebar.Controls.Add(this.panelAct);
             this.pnlSidebar.Controls.Add(this.btnSucursal);
             this.pnlSidebar.Controls.Add(this.btnUsuarios);
             this.pnlSidebar.Controls.Add(this.btnGraficos);
-            this.pnlSidebar.Controls.Add(this.panelAct);
             this.pnlSidebar.Controls.Add(this.btnVentas);
             this.pnlSidebar.Controls.Add(this.btnPrincipal);
             this.pnlSidebar.Controls.Add(this.btnClientes);
@@ -128,7 +128,7 @@
             this.btnSucursal.BackColor = System.Drawing.Color.Transparent;
             this.btnSucursal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSucursal.BorderRadius = 0;
-            this.btnSucursal.ButtonText = "    &SUCURSALES";
+            this.btnSucursal.ButtonText = "      &SUCURSALES";
             this.btnSucursal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.animacion2.SetDecoration(this.btnSucursal, BunifuAnimatorNS.DecorationType.None);
             this.animacion1.SetDecoration(this.btnSucursal, BunifuAnimatorNS.DecorationType.None);
@@ -145,15 +145,15 @@
             this.btnSucursal.IconVisible = true;
             this.btnSucursal.IconZoom = 50D;
             this.btnSucursal.IsTab = false;
-            this.btnSucursal.Location = new System.Drawing.Point(11, 340);
+            this.btnSucursal.Location = new System.Drawing.Point(3, 340);
             this.btnSucursal.Name = "btnSucursal";
             this.btnSucursal.Normalcolor = System.Drawing.Color.Transparent;
             this.btnSucursal.OnHovercolor = System.Drawing.Color.Crimson;
             this.btnSucursal.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSucursal.selected = false;
-            this.btnSucursal.Size = new System.Drawing.Size(168, 48);
-            this.btnSucursal.TabIndex = 17;
-            this.btnSucursal.Text = "    &SUCURSALES";
+            this.btnSucursal.Size = new System.Drawing.Size(178, 48);
+            this.btnSucursal.TabIndex = 7;
+            this.btnSucursal.Text = "      &SUCURSALES";
             this.btnSucursal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSucursal.Textcolor = System.Drawing.Color.White;
             this.btnSucursal.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,7 +165,7 @@
             this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
             this.btnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUsuarios.BorderRadius = 0;
-            this.btnUsuarios.ButtonText = "     &USUARIOS";
+            this.btnUsuarios.ButtonText = "      &USUARIOS";
             this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.animacion2.SetDecoration(this.btnUsuarios, BunifuAnimatorNS.DecorationType.None);
             this.animacion1.SetDecoration(this.btnUsuarios, BunifuAnimatorNS.DecorationType.None);
@@ -182,15 +182,15 @@
             this.btnUsuarios.IconVisible = true;
             this.btnUsuarios.IconZoom = 50D;
             this.btnUsuarios.IsTab = false;
-            this.btnUsuarios.Location = new System.Drawing.Point(10, 286);
+            this.btnUsuarios.Location = new System.Drawing.Point(4, 286);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Normalcolor = System.Drawing.Color.Transparent;
             this.btnUsuarios.OnHovercolor = System.Drawing.Color.Crimson;
             this.btnUsuarios.OnHoverTextColor = System.Drawing.Color.White;
             this.btnUsuarios.selected = false;
-            this.btnUsuarios.Size = new System.Drawing.Size(168, 48);
-            this.btnUsuarios.TabIndex = 16;
-            this.btnUsuarios.Text = "     &USUARIOS";
+            this.btnUsuarios.Size = new System.Drawing.Size(178, 48);
+            this.btnUsuarios.TabIndex = 6;
+            this.btnUsuarios.Text = "      &USUARIOS";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuarios.Textcolor = System.Drawing.Color.White;
             this.btnUsuarios.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -202,7 +202,7 @@
             this.btnGraficos.BackColor = System.Drawing.Color.Transparent;
             this.btnGraficos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGraficos.BorderRadius = 0;
-            this.btnGraficos.ButtonText = "&GRÁFICOS";
+            this.btnGraficos.ButtonText = "      &GRÁFICOS";
             this.btnGraficos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.animacion2.SetDecoration(this.btnGraficos, BunifuAnimatorNS.DecorationType.None);
             this.animacion1.SetDecoration(this.btnGraficos, BunifuAnimatorNS.DecorationType.None);
@@ -225,23 +225,13 @@
             this.btnGraficos.OnHovercolor = System.Drawing.Color.Crimson;
             this.btnGraficos.OnHoverTextColor = System.Drawing.Color.White;
             this.btnGraficos.selected = false;
-            this.btnGraficos.Size = new System.Drawing.Size(168, 48);
-            this.btnGraficos.TabIndex = 15;
-            this.btnGraficos.Text = "&GRÁFICOS";
-            this.btnGraficos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnGraficos.Size = new System.Drawing.Size(178, 48);
+            this.btnGraficos.TabIndex = 8;
+            this.btnGraficos.Text = "      &GRÁFICOS";
+            this.btnGraficos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGraficos.Textcolor = System.Drawing.Color.White;
             this.btnGraficos.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGraficos.Click += new System.EventHandler(this.btnGraficos_Click);
-            // 
-            // panelAct
-            // 
-            this.panelAct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.animacion2.SetDecoration(this.panelAct, BunifuAnimatorNS.DecorationType.None);
-            this.animacion1.SetDecoration(this.panelAct, BunifuAnimatorNS.DecorationType.None);
-            this.panelAct.Location = new System.Drawing.Point(3, 17);
-            this.panelAct.Name = "panelAct";
-            this.panelAct.Size = new System.Drawing.Size(10, 43);
-            this.panelAct.TabIndex = 14;
             // 
             // btnVentas
             // 
@@ -249,7 +239,7 @@
             this.btnVentas.BackColor = System.Drawing.Color.Transparent;
             this.btnVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnVentas.BorderRadius = 0;
-            this.btnVentas.ButtonText = "      VENTAS";
+            this.btnVentas.ButtonText = "      &VENTAS";
             this.btnVentas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.animacion2.SetDecoration(this.btnVentas, BunifuAnimatorNS.DecorationType.None);
             this.animacion1.SetDecoration(this.btnVentas, BunifuAnimatorNS.DecorationType.None);
@@ -273,8 +263,8 @@
             this.btnVentas.OnHoverTextColor = System.Drawing.Color.White;
             this.btnVentas.selected = false;
             this.btnVentas.Size = new System.Drawing.Size(178, 48);
-            this.btnVentas.TabIndex = 12;
-            this.btnVentas.Text = "      VENTAS";
+            this.btnVentas.TabIndex = 5;
+            this.btnVentas.Text = "      &VENTAS";
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentas.Textcolor = System.Drawing.Color.White;
             this.btnVentas.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -286,7 +276,7 @@
             this.btnPrincipal.BackColor = System.Drawing.Color.Transparent;
             this.btnPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPrincipal.BorderRadius = 0;
-            this.btnPrincipal.ButtonText = "      INICIO";
+            this.btnPrincipal.ButtonText = "      &INICIO";
             this.btnPrincipal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.animacion2.SetDecoration(this.btnPrincipal, BunifuAnimatorNS.DecorationType.None);
             this.animacion1.SetDecoration(this.btnPrincipal, BunifuAnimatorNS.DecorationType.None);
@@ -310,8 +300,8 @@
             this.btnPrincipal.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPrincipal.selected = false;
             this.btnPrincipal.Size = new System.Drawing.Size(178, 48);
-            this.btnPrincipal.TabIndex = 8;
-            this.btnPrincipal.Text = "      INICIO";
+            this.btnPrincipal.TabIndex = 1;
+            this.btnPrincipal.Text = "      &INICIO";
             this.btnPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrincipal.Textcolor = System.Drawing.Color.White;
             this.btnPrincipal.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -346,8 +336,8 @@
             this.btnClientes.OnHovercolor = System.Drawing.Color.Crimson;
             this.btnClientes.OnHoverTextColor = System.Drawing.Color.White;
             this.btnClientes.selected = false;
-            this.btnClientes.Size = new System.Drawing.Size(176, 48);
-            this.btnClientes.TabIndex = 11;
+            this.btnClientes.Size = new System.Drawing.Size(178, 48);
+            this.btnClientes.TabIndex = 4;
             this.btnClientes.Text = "      &CLIENTES";
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClientes.Textcolor = System.Drawing.Color.White;
@@ -360,7 +350,7 @@
             this.btnItems.BackColor = System.Drawing.Color.Transparent;
             this.btnItems.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnItems.BorderRadius = 0;
-            this.btnItems.ButtonText = "      PRODUCTOS";
+            this.btnItems.ButtonText = "      &PRODUCTOS";
             this.btnItems.Cursor = System.Windows.Forms.Cursors.Hand;
             this.animacion2.SetDecoration(this.btnItems, BunifuAnimatorNS.DecorationType.None);
             this.animacion1.SetDecoration(this.btnItems, BunifuAnimatorNS.DecorationType.None);
@@ -377,15 +367,15 @@
             this.btnItems.IconVisible = true;
             this.btnItems.IconZoom = 50D;
             this.btnItems.IsTab = false;
-            this.btnItems.Location = new System.Drawing.Point(3, 70);
+            this.btnItems.Location = new System.Drawing.Point(3, 66);
             this.btnItems.Name = "btnItems";
             this.btnItems.Normalcolor = System.Drawing.Color.Transparent;
             this.btnItems.OnHovercolor = System.Drawing.Color.Crimson;
             this.btnItems.OnHoverTextColor = System.Drawing.Color.White;
             this.btnItems.selected = false;
-            this.btnItems.Size = new System.Drawing.Size(175, 48);
-            this.btnItems.TabIndex = 9;
-            this.btnItems.Text = "      PRODUCTOS";
+            this.btnItems.Size = new System.Drawing.Size(178, 48);
+            this.btnItems.TabIndex = 2;
+            this.btnItems.Text = "      &PRODUCTOS";
             this.btnItems.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnItems.Textcolor = System.Drawing.Color.White;
             this.btnItems.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -397,7 +387,7 @@
             this.btnStock.BackColor = System.Drawing.Color.Transparent;
             this.btnStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStock.BorderRadius = 0;
-            this.btnStock.ButtonText = "      STOCK";
+            this.btnStock.ButtonText = "      &STOCK";
             this.btnStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.animacion2.SetDecoration(this.btnStock, BunifuAnimatorNS.DecorationType.None);
             this.animacion1.SetDecoration(this.btnStock, BunifuAnimatorNS.DecorationType.None);
@@ -414,15 +404,15 @@
             this.btnStock.IconVisible = true;
             this.btnStock.IconZoom = 50D;
             this.btnStock.IsTab = false;
-            this.btnStock.Location = new System.Drawing.Point(4, 124);
+            this.btnStock.Location = new System.Drawing.Point(4, 120);
             this.btnStock.Name = "btnStock";
             this.btnStock.Normalcolor = System.Drawing.Color.Transparent;
             this.btnStock.OnHovercolor = System.Drawing.Color.Crimson;
             this.btnStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStock.selected = false;
-            this.btnStock.Size = new System.Drawing.Size(176, 48);
-            this.btnStock.TabIndex = 10;
-            this.btnStock.Text = "      STOCK";
+            this.btnStock.Size = new System.Drawing.Size(178, 48);
+            this.btnStock.TabIndex = 3;
+            this.btnStock.Text = "      &STOCK";
             this.btnStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStock.Textcolor = System.Drawing.Color.White;
             this.btnStock.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -527,22 +517,32 @@
             // 
             this.animacion2.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.animacion2.Cursor = null;
-            animation6.AnimateOnlyDifferences = true;
-            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
-            animation6.LeafCoeff = 0F;
-            animation6.MaxTime = 1F;
-            animation6.MinTime = 0F;
-            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
-            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
-            animation6.MosaicSize = 0;
-            animation6.Padding = new System.Windows.Forms.Padding(0);
-            animation6.RotateCoeff = 0F;
-            animation6.RotateLimit = 0F;
-            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
-            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
-            animation6.TimeCoeff = 0F;
-            animation6.TransparencyCoeff = 0F;
-            this.animacion2.DefaultAnimation = animation6;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.animacion2.DefaultAnimation = animation4;
+            // 
+            // panelAct
+            // 
+            this.panelAct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.animacion2.SetDecoration(this.panelAct, BunifuAnimatorNS.DecorationType.None);
+            this.animacion1.SetDecoration(this.panelAct, BunifuAnimatorNS.DecorationType.None);
+            this.panelAct.Location = new System.Drawing.Point(3, 17);
+            this.panelAct.Name = "panelAct";
+            this.panelAct.Size = new System.Drawing.Size(10, 43);
+            this.panelAct.TabIndex = 15;
             // 
             // Principal
             // 
@@ -576,7 +576,6 @@
         private BunifuAnimatorNS.BunifuTransition animacion2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuFlatButton btnGraficos;
-        private System.Windows.Forms.Panel panelAct;
         private Bunifu.Framework.UI.BunifuFlatButton btnVentas;
         private Bunifu.Framework.UI.BunifuFlatButton btnPrincipal;
         private Bunifu.Framework.UI.BunifuFlatButton btnClientes;
@@ -591,5 +590,6 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuFlatButton btnSucursal;
         private Bunifu.Framework.UI.BunifuFlatButton btnUsuarios;
+        private System.Windows.Forms.Panel panelAct;
     }
 }

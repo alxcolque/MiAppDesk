@@ -23,6 +23,7 @@ namespace MiAppDesk.View.Dialogs
             InitializeComponent();
             controlForm();
             comboRol("");
+            comboSuc("");
         }
 
         private void Usuario_Dialog_Load(object sender, EventArgs e)
@@ -59,6 +60,14 @@ namespace MiAppDesk.View.Dialogs
             cmboRol.DisplayMember = "Nombre";
             cmboRol.ValueMember = "ID";
             C_Usuario.IdRol = Convert.ToInt32(cmboRol.SelectedValue.ToString());
+        }
+        public void comboSuc(string dato)
+        {
+            C_Sucursal obj1 = new C_Sucursal();
+            comboBoxS.DataSource = obj1.Listado(dato);
+            comboBoxS.DisplayMember = "Nombre";
+            comboBoxS.ValueMember = "ID";
+            C_Usuario.IdSuc = Convert.ToInt32(comboBoxS.SelectedValue.ToString());
         }
         //Controlar el boton guardar
         public void controlForm()
@@ -118,16 +127,14 @@ namespace MiAppDesk.View.Dialogs
 
                         obj.Editar(obj);
                         MessageBox.Show("Se editó el registro ");
-                        this.Close();
                         editarse = false;
+                        this.Close();
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("No se pudo editar el registro " + ex);
                     }
                 }
-                //
-                
             }
             else
             {
@@ -140,6 +147,15 @@ namespace MiAppDesk.View.Dialogs
             if (cmboRol.SelectedValue != null)
             {
                 C_Usuario.IdRol = Convert.ToInt32(cmboRol.SelectedValue.ToString());
+            }
+        }
+
+        private void comboBoxS_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxS.SelectedValue != null)
+            {
+                C_Usuario.IdSuc = Convert.ToInt32(comboBoxS.SelectedValue.ToString());
+                //MessageBox.Show(cmbSucursal.SelectedValue.ToString());
             }
         }
     }
