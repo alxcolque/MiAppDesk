@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiAppDesk.Model
 {
-    class M_Inicio
+    public class M_Inicio
     {
     }
 }

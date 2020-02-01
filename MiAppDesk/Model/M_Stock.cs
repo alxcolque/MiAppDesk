@@ -40,7 +40,7 @@ namespace MiAppDesk.Model
             {
                 StringBuilder Query = new StringBuilder();
                 abrirConexion();
-                Query.Append("SELECT s.sucursal_id,s.item_id,i.nombre,s.cantidad,s.fecha,su.nombre FROM stocks s,sucursales su,items i WHERE s.sucursal_id = su.sucursal_id AND s.item_id = i.item_id AND i.nombre LIKE '" + lista + "' '%';");
+                Query.Append("SELECT s.sucursal_id,s.item_id,i.nombre,s.cantidad,s.fecha,su.nombre FROM stocks s,sucursales su,items i WHERE s.sucursal_id = su.sucursal_id AND s.item_id = i.item_id AND s.sucursal_id = '" + C_Stock.suc + "' AND i.nombre LIKE '" + lista + "' '%';");
 
                 command.CommandType = System.Data.CommandType.Text;
                 command.CommandText = Query.ToString();

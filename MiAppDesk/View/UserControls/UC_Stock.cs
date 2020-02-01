@@ -21,7 +21,7 @@ namespace MiAppDesk.View.UserControls
         public UC_Stock()
         {
             InitializeComponent();
-            datostabla("");
+            comboSuc1("");
             AccionesTabla();
         }
         private void datostabla(string buscar)
@@ -60,6 +60,26 @@ namespace MiAppDesk.View.UserControls
             else
             {
                 MessageBox.Show("Seleccione la fila que desee eliminar ");
+            }
+        }
+        //Se agregó después
+        public void comboSuc1(string dato)
+        {
+            C_Sucursal obj1 = new C_Sucursal();
+            comboSuc.DataSource = obj1.Listado(dato);
+            comboSuc.DisplayMember = "Nombre";
+            comboSuc.ValueMember = "ID";
+            C_Stock.suc = Convert.ToInt32(comboSuc.SelectedValue.ToString());
+            datostabla("");
+        }
+
+        private void comboSuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboSuc.SelectedValue != null)
+            {
+                C_Stock.suc = Convert.ToInt32(comboSuc.SelectedValue.ToString());
+                datostabla("");
+                //MessageBox.Show(cmbSucursal.SelectedValue.ToString());
             }
         }
     }
