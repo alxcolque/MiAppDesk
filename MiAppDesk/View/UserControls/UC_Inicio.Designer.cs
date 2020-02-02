@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Inicio));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnGuardarCart = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lnkVentas = new System.Windows.Forms.LinkLabel();
@@ -42,10 +42,6 @@
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dgvCart = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuitarorden = new Bunifu.Framework.UI.BunifuImageButton();
             this.lnkClientes = new System.Windows.Forms.LinkLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -65,13 +61,15 @@
             this.dgvStock = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.curvaBtnEjecutarV = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboSuc = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunificbuscar = new Bunifu.Framework.UI.BunifuTextbox();
             this.txtBuscarO = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
-            this.comboSuc = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.comboBoxCliente = new System.Windows.Forms.ComboBox();
+            this.btnCliente = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
@@ -83,6 +81,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGuardarCart
@@ -109,7 +108,7 @@
             this.btnGuardarCart.IconVisible = true;
             this.btnGuardarCart.IconZoom = 40D;
             this.btnGuardarCart.IsTab = false;
-            this.btnGuardarCart.Location = new System.Drawing.Point(561, 536);
+            this.btnGuardarCart.Location = new System.Drawing.Point(599, 536);
             this.btnGuardarCart.Margin = new System.Windows.Forms.Padding(5);
             this.btnGuardarCart.Name = "btnGuardarCart";
             this.btnGuardarCart.Normalcolor = System.Drawing.Color.Green;
@@ -131,7 +130,7 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.lblVentasHoy);
             this.panel2.Controls.Add(this.bunifuCustomLabel3);
-            this.panel2.Location = new System.Drawing.Point(34, 89);
+            this.panel2.Location = new System.Drawing.Point(34, 74);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(217, 125);
             this.panel2.TabIndex = 103;
@@ -186,68 +185,40 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(454, 230);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(374, 219);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(84, 25);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(152, 25);
             this.bunifuCustomLabel2.TabIndex = 115;
-            this.bunifuCustomLabel2.Text = "ORDEN";
+            this.bunifuCustomLabel2.Text = "ORDEN PARA:";
             // 
             // dgvCart
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvCart.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvCart.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvCart.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dgvCart.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.dgvCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCart.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.col1,
-            this.dataGridViewTextBoxColumn2,
-            this.col3,
-            this.Column5});
             this.dgvCart.DoubleBuffered = true;
             this.dgvCart.EnableHeadersVisualStyles = false;
             this.dgvCart.HeaderBgColor = System.Drawing.Color.Crimson;
             this.dgvCart.HeaderForeColor = System.Drawing.Color.Honeydew;
-            this.dgvCart.Location = new System.Drawing.Point(447, 266);
+            this.dgvCart.Location = new System.Drawing.Point(403, 282);
             this.dgvCart.Name = "dgvCart";
             this.dgvCart.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvCart.Size = new System.Drawing.Size(334, 215);
+            this.dgvCart.RowHeadersVisible = false;
+            this.dgvCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCart.Size = new System.Drawing.Size(368, 218);
             this.dgvCart.TabIndex = 105;
-            // 
-            // col1
-            // 
-            this.col1.HeaderText = "Cod";
-            this.col1.Name = "col1";
-            this.col1.ReadOnly = true;
-            this.col1.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Artículo";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // col3
-            // 
-            this.col3.HeaderText = "Cantidad";
-            this.col3.Name = "col3";
-            this.col3.ReadOnly = true;
-            this.col3.Width = 65;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Total Precio";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 65;
             // 
             // btnQuitarorden
             // 
@@ -256,7 +227,7 @@
             this.btnQuitarorden.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.btnQuitarorden.Image = ((System.Drawing.Image)(resources.GetObject("btnQuitarorden.Image")));
             this.btnQuitarorden.ImageActive = null;
-            this.btnQuitarorden.Location = new System.Drawing.Point(388, 368);
+            this.btnQuitarorden.Location = new System.Drawing.Point(344, 354);
             this.btnQuitarorden.Name = "btnQuitarorden";
             this.btnQuitarorden.Size = new System.Drawing.Size(53, 46);
             this.btnQuitarorden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -295,7 +266,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblOredenes);
             this.panel1.Controls.Add(this.lblVentas);
-            this.panel1.Location = new System.Drawing.Point(529, 89);
+            this.panel1.Location = new System.Drawing.Point(529, 74);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(217, 125);
             this.panel1.TabIndex = 102;
@@ -363,7 +334,7 @@
             this.btnNuevoOrden.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.btnNuevoOrden.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoOrden.Image")));
             this.btnNuevoOrden.ImageActive = null;
-            this.btnNuevoOrden.Location = new System.Drawing.Point(388, 297);
+            this.btnNuevoOrden.Location = new System.Drawing.Point(344, 293);
             this.btnNuevoOrden.Name = "btnNuevoOrden";
             this.btnNuevoOrden.Size = new System.Drawing.Size(53, 46);
             this.btnNuevoOrden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -380,7 +351,7 @@
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.lblClientes);
             this.panel3.Controls.Add(this.bunifuCustomLabel5);
-            this.panel3.Location = new System.Drawing.Point(281, 89);
+            this.panel3.Location = new System.Drawing.Point(281, 74);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(217, 125);
             this.panel3.TabIndex = 104;
@@ -402,7 +373,7 @@
             this.lblTotalCesta.AutoSize = true;
             this.lblTotalCesta.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalCesta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTotalCesta.Location = new System.Drawing.Point(641, 494);
+            this.lblTotalCesta.Location = new System.Drawing.Point(695, 503);
             this.lblTotalCesta.Name = "lblTotalCesta";
             this.lblTotalCesta.Size = new System.Drawing.Size(58, 28);
             this.lblTotalCesta.TabIndex = 112;
@@ -414,7 +385,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(572, 501);
+            this.label2.Location = new System.Drawing.Point(626, 510);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 19);
             this.label2.TabIndex = 111;
@@ -462,7 +433,7 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(27, 230);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(3, 228);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(136, 25);
             this.bunifuCustomLabel1.TabIndex = 114;
@@ -470,20 +441,20 @@
             // 
             // dgvStock
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvStock.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvStock.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvStock.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dgvStock.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.dgvStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvStock.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStock.DoubleBuffered = true;
             this.dgvStock.EnableHeadersVisualStyles = false;
@@ -494,7 +465,7 @@
             this.dgvStock.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvStock.RowHeadersVisible = false;
             this.dgvStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStock.Size = new System.Drawing.Size(379, 291);
+            this.dgvStock.Size = new System.Drawing.Size(335, 291);
             this.dgvStock.TabIndex = 101;
             // 
             // curvaBtnEjecutarV
@@ -515,6 +486,25 @@
             this.panel4.Size = new System.Drawing.Size(778, 42);
             this.panel4.TabIndex = 116;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(153, 18);
+            this.label3.TabIndex = 122;
+            this.label3.Text = "Selecione Sucursal";
+            // 
+            // comboSuc
+            // 
+            this.comboSuc.FormattingEnabled = true;
+            this.comboSuc.Location = new System.Drawing.Point(171, 9);
+            this.comboSuc.Name = "comboSuc";
+            this.comboSuc.Size = new System.Drawing.Size(185, 26);
+            this.comboSuc.TabIndex = 121;
+            this.comboSuc.SelectedIndexChanged += new System.EventHandler(this.comboSuc_SelectedIndexChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -534,7 +524,7 @@
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.txtBuscar.Location = new System.Drawing.Point(243, 228);
+            this.txtBuscar.Location = new System.Drawing.Point(196, 228);
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(125, 27);
@@ -551,7 +541,7 @@
             this.bunificbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunificbuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(60)))));
             this.bunificbuscar.Icon = ((System.Drawing.Image)(resources.GetObject("bunificbuscar.Icon")));
-            this.bunificbuscar.Location = new System.Drawing.Point(194, 221);
+            this.bunificbuscar.Location = new System.Drawing.Point(147, 221);
             this.bunificbuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunificbuscar.Name = "bunificbuscar";
             this.bunificbuscar.Size = new System.Drawing.Size(189, 40);
@@ -564,13 +554,13 @@
             this.txtBuscarO.BackColor = System.Drawing.Color.LightGray;
             this.txtBuscarO.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtBuscarO.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBuscarO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.txtBuscarO.Location = new System.Drawing.Point(628, 228);
-            this.txtBuscarO.Multiline = true;
+            this.txtBuscarO.Location = new System.Drawing.Point(669, 252);
             this.txtBuscarO.Name = "txtBuscarO";
-            this.txtBuscarO.Size = new System.Drawing.Size(125, 27);
+            this.txtBuscarO.Size = new System.Drawing.Size(90, 15);
             this.txtBuscarO.TabIndex = 120;
+            this.txtBuscarO.TextChanged += new System.EventHandler(this.txtBuscarO_TextChanged);
             // 
             // bunifuTextbox1
             // 
@@ -582,36 +572,47 @@
             this.bunifuTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(60)))));
             this.bunifuTextbox1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.Icon")));
-            this.bunifuTextbox1.Location = new System.Drawing.Point(579, 221);
+            this.bunifuTextbox1.Location = new System.Drawing.Point(619, 241);
             this.bunifuTextbox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuTextbox1.Name = "bunifuTextbox1";
-            this.bunifuTextbox1.Size = new System.Drawing.Size(189, 40);
+            this.bunifuTextbox1.Size = new System.Drawing.Size(149, 35);
             this.bunifuTextbox1.TabIndex = 119;
             this.bunifuTextbox1.text = "";
             // 
-            // comboSuc
+            // comboBoxCliente
             // 
-            this.comboSuc.FormattingEnabled = true;
-            this.comboSuc.Location = new System.Drawing.Point(171, 9);
-            this.comboSuc.Name = "comboSuc";
-            this.comboSuc.Size = new System.Drawing.Size(185, 26);
-            this.comboSuc.TabIndex = 121;
-            this.comboSuc.SelectedIndexChanged += new System.EventHandler(this.comboSuc_SelectedIndexChanged);
+            this.comboBoxCliente.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.comboBoxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCliente.ForeColor = System.Drawing.Color.White;
+            this.comboBoxCliente.FormattingEnabled = true;
+            this.comboBoxCliente.Location = new System.Drawing.Point(344, 247);
+            this.comboBoxCliente.Name = "comboBoxCliente";
+            this.comboBoxCliente.Size = new System.Drawing.Size(182, 26);
+            this.comboBoxCliente.TabIndex = 122;
+            this.comboBoxCliente.SelectedIndexChanged += new System.EventHandler(this.comboBoxCliente_SelectedIndexChanged);
             // 
-            // label3
+            // btnCliente
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 18);
-            this.label3.TabIndex = 122;
-            this.label3.Text = "Selecione Sucursal";
+            this.btnCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCliente.BackColor = System.Drawing.Color.White;
+            this.btnCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCliente.Image")));
+            this.btnCliente.ImageActive = null;
+            this.btnCliente.Location = new System.Drawing.Point(532, 244);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(32, 32);
+            this.btnCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCliente.TabIndex = 123;
+            this.btnCliente.TabStop = false;
+            this.btnCliente.Zoom = 10;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // UC_Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnCliente);
+            this.Controls.Add(this.comboBoxCliente);
             this.Controls.Add(this.txtBuscarO);
             this.Controls.Add(this.bunifuTextbox1);
             this.Controls.Add(this.txtBuscar);
@@ -634,6 +635,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_Inicio";
             this.Size = new System.Drawing.Size(784, 597);
+            this.Load += new System.EventHandler(this.UC_Inicio_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -649,6 +651,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -664,10 +667,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         public Bunifu.Framework.UI.BunifuCustomDataGrid dgvCart;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private Bunifu.Framework.UI.BunifuImageButton btnQuitarorden;
         private System.Windows.Forms.LinkLabel lnkClientes;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -694,5 +693,7 @@
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboSuc;
+        private System.Windows.Forms.ComboBox comboBoxCliente;
+        private Bunifu.Framework.UI.BunifuImageButton btnCliente;
     }
 }

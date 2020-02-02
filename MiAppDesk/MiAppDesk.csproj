@@ -82,6 +82,12 @@
     <Compile Include="View\Dialogs\AddStock_Dialog.Designer.cs">
       <DependentUpon>AddStock_Dialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Dialogs\AddToCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dialogs\AddToCart.Designer.cs">
+      <DependentUpon>AddToCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Dialogs\Ciudad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </Compile>
     <EmbeddedResource Include="View\Dialogs\AddStock_Dialog.resx">
       <DependentUpon>AddStock_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dialogs\AddToCart.resx">
+      <DependentUpon>AddToCart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Dialogs\Ciudad.resx">
       <DependentUpon>Ciudad.cs</DependentUpon>
