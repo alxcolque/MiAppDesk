@@ -119,7 +119,7 @@ namespace MiAppDesk.View.UserControls
 
         private void UC_Inicio_Load(object sender, EventArgs e)
         {
-            
+
             //datostabla1("");
         }
         private void comboCliente(string dato)
@@ -149,6 +149,29 @@ namespace MiAppDesk.View.UserControls
             Cliente_Dialog m = new Cliente_Dialog();
             m.ShowDialog();
             comboCliente("");
+        }
+
+        private void btnGuardarCart_Click(object sender, EventArgs e)
+        {
+            if (dgvCart.Rows.Count != 0)
+            {
+                try
+                {
+                    for (int i = 0; i < dgvCart.Rows.Count; i++)
+                    {
+                        MessageBox.Show(dgvCart.Rows[i].Cells[4].Value + " " + dgvCart.Rows[i].Cells[5].Value);
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Ocurrio un error");
+                }
+            }
+            else
+            {
+                MessageBox.Show("La tabla está vacía");
+            }
         }
     }
 }

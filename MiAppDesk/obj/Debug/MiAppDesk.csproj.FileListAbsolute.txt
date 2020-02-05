@@ -30,3 +30,4 @@ C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debu
 C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.Dialogs.AddStock_Dialog.resources
 C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.UserControls.UC_Stock.resources
 C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.Dialogs.AddToCart.resources
+C:\Users\ALEX\Documents\Visual Studio 2015\Projects\MiAppDesk\MiAppDesk\obj\Debug\MiAppDesk.View.UserControls.UC_Venta.resources

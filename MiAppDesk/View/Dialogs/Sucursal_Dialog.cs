@@ -91,7 +91,7 @@ namespace MiAppDesk.View.Dialogs
             cmboCiudad.DataSource = obj3.ListC(idDep);
             cmboCiudad.DisplayMember = "NombreCi";
             cmboCiudad.ValueMember = "IdCi";
-    }
+        }
 
         private void cmbxDepto_SelectedIndexChanged(object sender, EventArgs e)
         {
